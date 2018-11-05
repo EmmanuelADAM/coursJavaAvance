@@ -11,7 +11,7 @@ class ClientTCP  {
       // récupère l'adresse internet du host
       // null permet de tester les applis sur une machine unique 
       InetAddress addr = InetAddress.getByName(null);
-      Socket socket = new Socket(addr, 8888); // utilisation du m�me no de port�
+      Socket socket = new Socket(addr, 8888); // utilisation du meme no de port
       try (// récupération du flux d'entrée
             Scanner  in = new Scanner( socket.getInputStream());
             // récupération du flux de sortie
