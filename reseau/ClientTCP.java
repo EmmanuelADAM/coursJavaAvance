@@ -13,6 +13,7 @@ class ClientTCP  {
         // récupère l'adresse internet du host
         // null permet de tester les applis sur une machine unique
         InetAddress addr = InetAddress.getByName(null);
+      //la syntaxe try-with suivante va clore tout ce qui a été ouvert en sortie de bloc
         try (
                 Socket socket = new Socket(addr, 8888);
                 // récupération du flux d'entrée
