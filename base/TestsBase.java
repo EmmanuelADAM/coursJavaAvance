@@ -182,6 +182,36 @@ public class TestsBase {
         System.out.println("nvelle valeur associee  à yan =" + users.get("yan"));
     }
 
+        /**
+     * exemple de fonction utilisant une fonction passee en parametre
+     * initialise le contenu de tab3 avec l'application de f sur les elements de tab1 et tab2
+     * @param tab1 tableau d'entree
+     * @param tab2 tableau d'entree
+     * @param tab3 tableau de sortie
+     * @param f fonction (Integer, Integer)->Double
+     * */
+    static void opeSurTab(Integer[] tab1, Integer[] tab2, Double[] tab3, BiFunction<Integer, Integer, Double> f)
+    {
+        //eviter de depasser les bornes
+        int taille = Math.min(tab1.length, Math.min(tab2.length, tab3.length));
+        for(int i=0; i<taille; i++)
+            tab3[i] = f.apply(tab1[i], tab2[i]);
+    }
+
+    /**
+     * exemple de programmation fonctionnelle
+     */
+    static void testFonctionnel()
+    {
+        Integer[]tab1 = new Integer[]{1,2,3,4,5,6};
+        Integer[]tab2 = new Integer[]{9,8,7,6};
+        Double[]tab3 = new Double[10];
+        opeSurTab(tab1, tab2, tab3, (a,b)->(double)a/b);
+        out.println("tab3 = " + Arrays.toString(tab3));
+        opeSurTab(tab1, tab2, tab3, (a,b)->(double)a+b);
+        out.println("tab3 = " + Arrays.toString(tab3));
+    }
+
 
     public static void  main(String[] args) {
         //coutObjet(100000);
@@ -190,5 +220,6 @@ public class TestsBase {
         //testTriParallele();
         testListe();
         //testMap();
+        //testFonctionnel();
     }
 }
