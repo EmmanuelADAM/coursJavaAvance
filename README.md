@@ -9,4 +9,4 @@ Quelques support au cours Java Avancé à l'ISTV - Université Polytechnique des
 
 ## TP 
 * Contient des codes répondant à quelques points de programmation sur les TP
-  * [Le compte est bon](coursJavaAvance/TP/CompteEstBon/Readme.md) : exemple de résolution du problème par Java
+  * [Le compte est bon](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/CompteEstBon/) : exemple de résolution du problème par Java
