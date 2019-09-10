@@ -1,3 +1,9 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
 # Cours Java Avancé
 Quelques support au cours Java Avancé à l'ISTV - Université Polytechnique des Hauts-De-France
 
