@@ -1,6 +1,7 @@
 package base;
 
 import java.util.*;
+import java.util.function.BiFunction;
 
 import static java.lang.System.out;
 
@@ -29,9 +30,9 @@ public class TestsBase {
 
         long tpsFin = System.nanoTime();
         long tailleFin = Runtime.getRuntime().freeMemory();
-        System.out.println("somme de 0 à " + nb + " = " + somme);
-        System.out.println("-- tps de calcul par primitive =  " + (double)(tpsFin - tpsDebut)/1000000 + " ms");
-        System.out.println("-- memoire utilisee =  " + (tailleDebut - tailleFin)/8 + " o");
+        out.println("somme de 0 à " + nb + " = " + somme);
+        out.println("-- tps de calcul par primitive =  " + (double)(tpsFin - tpsDebut)/1000000 + " ms");
+        out.println("-- memoire utilisee =  " + (tailleDebut - tailleFin)/8 + " o");
 
         Integer objSomme = 0;
         tailleDebut = Runtime.getRuntime().freeMemory();
@@ -42,9 +43,9 @@ public class TestsBase {
 
         tpsFin = System.nanoTime();
         tailleFin = Runtime.getRuntime().freeMemory();
-        System.out.println("somme de 0 à " + nb + " = " + objSomme);
-        System.out.println("-- tps de calcul par objet =  " + (double)(tpsFin - tpsDebut)/1000000 + " ms");
-        System.out.println("-- memoire utilisee =  " + (tailleDebut - tailleFin)/8 + " o");
+        out.println("somme de 0 à " + nb + " = " + objSomme);
+        out.println("-- tps de calcul par objet =  " + (double)(tpsFin - tpsDebut)/1000000 + " ms");
+        out.println("-- memoire utilisee =  " + (tailleDebut - tailleFin)/8 + " o");
     }
 
 
@@ -60,23 +61,23 @@ public class TestsBase {
         String ch = new String();
         for(int i=0; i<taille; i++)  ch += i + ", ";
         long momentFin  = System.nanoTime();
-        System.out.println(ch);
-        System.out.println("temps écoulé = "+ (momentFin - momentDebut));
+        out.println(ch);
+        out.println("temps écoulé = "+ (momentFin - momentDebut));
 
         String sep = ", ";
         momentDebut = System.nanoTime();
         StringBuilder sb = new StringBuilder();
         for(int i=0; i<taille; i++) sb.append(i).append(sep);
         momentFin  = System.nanoTime();
-        System.out.println(sb);
-        System.out.println("temps écoulé = "+ (momentFin - momentDebut));
+        out.println(sb);
+        out.println("temps écoulé = "+ (momentFin - momentDebut));
 
         momentDebut = System.nanoTime();
         StringBuffer sb2 = new StringBuffer();
         for(int i=0; i<taille; i++) sb2.append(i).append(sep);
         momentFin  = System.nanoTime();
-        System.out.println(sb2);
-        System.out.println("temps écoulé = "+ (momentFin - momentDebut));
+        out.println(sb2);
+        out.println("temps écoulé = "+ (momentFin - momentDebut));
     }
 
     /**fonction illustrant la creation d'un tableau, son affichage, son tri par lambda expression et sans boucles*/
@@ -118,7 +119,7 @@ public class TestsBase {
         Arrays.parallelSort(tab);
         long momentFin = System.nanoTime();
 
-        System.out.println("temps écoulé = "+ (double)(momentFin - momentDebut)/1000000000d + " s");
+        out.println("temps écoulé = "+ (double)(momentFin - momentDebut)/1000000000d + " s");
 
         //verificiations sur les 10 premiers
         for(int i=0; i<10; i++) out.print(tab[i] + ", ");
@@ -175,11 +176,11 @@ public class TestsBase {
         String key = "krol";
         String val = users.get(key);
         if(val!=null)
-            System.out.println("valeur associee à " + key + "=" + val);
+            out.println("valeur associee à " + key + "=" + val);
 
         val = users.put("yan", "yann");
-        System.out.println("valeur associee precedemment à yan =" + val);
-        System.out.println("nvelle valeur associee  à yan =" + users.get("yan"));
+        out.println("valeur associee precedemment à yan =" + val);
+        out.println("nvelle valeur associee  à yan =" + users.get("yan"));
     }
 
         /**
