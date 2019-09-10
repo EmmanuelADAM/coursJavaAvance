@@ -1,10 +1,10 @@
 # Cours Java Avancé
 Quelques support au cours Java Avancé à l'ISTV - Université Polytechnique des Hauts-De-France
 
-## Base
+## [Base](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/base)
 * Contient des exemples de base de la programmation java (gestion de mémoire, d'objets, de tableaux, de liste, de lambda expression)
 
-## Reseaux 
+## [Reseaux](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/reseau) 
 * Contient des exemples de base de la programmation réseau en java (Socket, ...)
 
 ## TP 
