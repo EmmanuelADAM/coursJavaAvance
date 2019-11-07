@@ -24,3 +24,5 @@ Les algorithmes génétiques permettent d’approcher d’une bonne solution en 
   * Pour éviter de boucler sur les mêmes gènes et permettre d’atteindre potentiellement de meilleurs résultats, quelques mutations peuvent apparaître dans la population.
   * en évitant les sacs les plus utiles !
   * les doublons de sac sont retirés et l’ensemble est trié.
+
+Exécutez le `main` de la classe `AlgoGPourSacs`...
