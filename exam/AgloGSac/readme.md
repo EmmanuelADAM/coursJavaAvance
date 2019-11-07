@@ -13,14 +13,14 @@ gene = [1,1,0,1,0,1, 0, 0, -, 0]Retour ligne automatique
 signifie que le sac comporte les objets n°0, n°1, n°3 et n°5.
 
 On somme alors l’intérêt porté à ces objets, on somme également leurs poids et on calcule l’utilité du sac en combinant ces sommes : sommeInteret - SommePoids.
-** Ainsi, à poids égal, un sac plus intéressant est plus utile
-** A intérêt égal, un sac moins lourd est plus utile.
+  * Ainsi, à poids égal, un sac plus intéressant est plus utile 
+  * A intérêt égal, un sac moins lourd est plus utile.
 Aussi, on dira qu’un sac est inutile (utilité = -∞) si son poids dépasse un seuil fixé.
 
 Les algorithmes génétiques permettent d’approcher d’une bonne solution en étant peu couteux :
 * quelques sacs sont générés, tous différents
 * puis, pendant n générations, ou jusqu’à ce que l’utilité du meilleur n’évolue plus après n générations
-** puis les meilleurs se croisent pour donner naissance à de nouveaux sacs
-** Pour éviter de boucler sur les mêmes gènes et permettre d’atteindre potentiellement de meilleurs résultats, quelques mutations peuvent apparaître dans la population.
-** en évitant les sacs les plus utiles !
-** les doublons de sac sont retirés et l’ensemble est trié.
+  * puis les meilleurs se croisent pour donner naissance à de nouveaux sacs
+  * Pour éviter de boucler sur les mêmes gènes et permettre d’atteindre potentiellement de meilleurs résultats, quelques mutations peuvent apparaître dans la population.
+  * en évitant les sacs les plus utiles !
+  * les doublons de sac sont retirés et l’ensemble est trié.
