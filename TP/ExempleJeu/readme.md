@@ -7,3 +7,4 @@ Une grille de 5x5 est dessinee;
 - sur tous les croisements se trouvent des petites zones cliquable
 - pour déplacer un jeton, il suffit de le sélectionner et de sélectionner une zone cliquable libre...
 
+Lancer le `main` de `ExempleGrilleJeuJFX`.
