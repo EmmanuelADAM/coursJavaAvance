@@ -147,10 +147,10 @@ public class ExempleGrilleJeuJFX extends Application implements EventHandler<Mou
         {
             Place p = (Place)mouseEvent.getSource();
             if(pionSelectionne!=null && pionSelectionne.isSelected()) {
-                int startX = (int)(pionSelectionne.getCenterX() / widthStep - decalage);
-                int startY = (int)(pionSelectionne.getCenterY() / heightStep - decalage);
-                int endX = (int)(p.getCenterX() / widthStep - decalage);
-                int endY = (int)(p.getCenterY() / heightStep - decalage);
+                int startX = (int)Math.round(pionSelectionne.getCenterX() / widthStep - decalage);
+                int startY = (int)Math.round(pionSelectionne.getCenterY() / heightStep - decalage);
+                int endX = (int)Math.round(p.getCenterX() / widthStep - decalage);
+                int endY = (int)Math.round(p.getCenterY() / heightStep - decalage);
                 System.err.println ("startX, startY, endX, endY=" + startX+","+ startY+","+ endX+","+ endY);
                     animPionVers(p);
                     pionSelectionne.select();
