@@ -2,7 +2,8 @@
 
 - **TestProcess** : montre que les méthodes d'une tâche peuvent être appelées en parralèle. Dans ce code, la tache effectue un long calcul qui est interrompu lorsque sa methode arrete() est exécutée en //.
   - Exemple de sortie de programme : 
-  ```Mon nom est : tache 1
+  ```
+  Mon nom est : tache 1
   Je suis la tâche principale
   Mon nom est : tache 2
   Je suis la tâche principale et j'arrete les taches
