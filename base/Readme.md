@@ -33,5 +33,16 @@
   temps écoulé pour le tri de 100000000 entiers en parallèle = 6.198591867 s
   3, 4, 8, 8, 10, 10, 11, 11, 11, 11, 
 - fonction qui illustre le fonctionnement de liste dynamiques et statiques
+  - exemple de sortie :
+  ```
+  liste1 = [1, 2, 3, 4, 5]
+  liste2 = [4, 5, 6, 7, 8]
+  concaténation = [1, 2, 3, 4, 5, 4, 5, 6, 7, 8]
+  union = [1, 2, 3, 4, 5, 6, 7, 8]
+  intersection = [4, 5]
+  unionDisjointe = [1, 2, 3, 6, 7, 8]
+  valeur > 5 dans l'union :
+  6, 7, 8, 
+  union sans les valeurs < 5 :[5, 6, 7, 8]
 - test de map String < - > String
 - exemple de fonction utilisant une fonction passee en parametre (programmation fonctionnelle (lambda))
