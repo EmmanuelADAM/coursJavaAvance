@@ -2,6 +2,14 @@
 
 ## TestsBase
 - fonction pour illustrer le cout de la creation d'objets
+  - exemple de sortie : 
+  ```
+  somme de 0 à 60000 = 1799970000
+  -- tps de calcul en utilisant les primitives =  1.307451 ms
+  -- memoire utilisee =  0 o
+  somme de 0 à 60000 = 1799970000
+  -- tps de calcul en utilisant les objets =  8.709526 ms
+  -- memoire utilisee =  94113 o
 - fonction qui compare les couts en tps de l'utilisation de String, StringBuilder et StringBuffer
   - exemple de sortie : 
   ```
