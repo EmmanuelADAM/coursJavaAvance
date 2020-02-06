@@ -28,3 +28,11 @@
   10:49:57 -> Execution de tache t1
   10:49:57 -> Execution de tache t2
   10:49:59 -> FIN !!
+
+- **TestLambdaRun** : montre deux exemples de création de processus par lambda expression; ce qui permet de paralléliser des calculs sans devoir créer de classe de processus dédiées. Un des exemple calcule la combinatoire en utilisant de grands entiers (BigInteger)
+  - Exemple de sortie de programme : 
+  ```
+  fact[0] = 265252859812191058636308480000000
+  fact[1] = 957391540294832002027614722000941251336135085932935459563196844422460451015364906387985902326752146410533027840000000000
+  combi de 30 elements parmi 10000 = 3609354262844521281086173583674469373181460849385353937541082122453577570133286597008000
+
