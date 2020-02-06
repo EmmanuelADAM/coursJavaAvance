@@ -31,7 +31,7 @@ public class TestsBase {
         long tpsFin = System.nanoTime();
         long tailleFin = Runtime.getRuntime().freeMemory();
         out.println("somme de 0 à " + nb + " = " + somme);
-        out.println("-- tps de calcul par primitive =  " + (double)(tpsFin - tpsDebut)/1000000 + " ms");
+        System.out.println("-- tps de calcul en utilisant les primitives =  " + (double)(tpsFin - tpsDebut)/1000000 + " ms");
         out.println("-- memoire utilisee =  " + (tailleDebut - tailleFin)/8 + " o");
 
         Integer objSomme = 0;
@@ -44,7 +44,7 @@ public class TestsBase {
         tpsFin = System.nanoTime();
         tailleFin = Runtime.getRuntime().freeMemory();
         out.println("somme de 0 à " + nb + " = " + objSomme);
-        out.println("-- tps de calcul par objet =  " + (double)(tpsFin - tpsDebut)/1000000 + " ms");
+        System.out.println("-- tps de calcul en utilisant les objets =  " + (double)(tpsFin - tpsDebut)/1000000 + " ms");
         out.println("-- memoire utilisee =  " + (tailleDebut - tailleFin)/8 + " o");
     }
 
@@ -61,43 +61,45 @@ public class TestsBase {
         String ch = new String();
         for(int i=0; i<taille; i++)  ch += i + ", ";
         long momentFin  = System.nanoTime();
-        out.println(ch);
-        out.println("temps écoulé = "+ (momentFin - momentDebut));
+        System.out.println(sb.substring(0, 30));
+        System.out.println("Concaténation de "+taille+" String par +, temps écoulé = "+  (double)(momentFin - momentDebut)/1000000 + " ms");
 
         String sep = ", ";
         momentDebut = System.nanoTime();
         StringBuilder sb = new StringBuilder();
         for(int i=0; i<taille; i++) sb.append(i).append(sep);
         momentFin  = System.nanoTime();
-        out.println(sb);
-        out.println("temps écoulé = "+ (momentFin - momentDebut));
+        System.out.println(sb.substring(0, 30));
+        System.out.println("Concaténation de "+taille+" String par StringBuilder, temps écoulé = "+ (double)(momentFin - momentDebut)/1000000 + " ms");
 
         momentDebut = System.nanoTime();
         StringBuffer sb2 = new StringBuffer();
         for(int i=0; i<taille; i++) sb2.append(i).append(sep);
         momentFin  = System.nanoTime();
-        out.println(sb2);
-        out.println("temps écoulé = "+ (momentFin - momentDebut));
+        System.out.println(sb2.substring(0, 30));
+        System.out.println("Concaténation de "+taille+" String par StringBuffer, temps écoulé = "+ (double)(momentFin - momentDebut)/1000000 + " ms");
     }
 
     /**fonction illustrant la creation d'un tableau, son affichage, son tri par lambda expression et sans boucles*/
     static void testTabEtTri()
     {
-        int taille = 100;
+        int taille = 100000000;
         int[] tab = new int [taille];
         Random hasard = new Random();
         //affecte a chaque case d'indice i un nb entre 0 et taille
         Arrays.setAll(tab, i->hasard.nextInt(taille));
-        //affichage du tableau
-        out.println(Arrays.toString(tab));
+        //affiche les 10 premiers
+        for(int i=0; i<10; i++) out.print(tab[i] + ", ");
+        out.println();
         //tri
         long momentDebut = System.nanoTime();
         Arrays.sort(tab);
         long momentFin = System.nanoTime();
 
-        System.out.println("temps écoulé = "+ (double)(momentFin - momentDebut)/1000000000d + " s");
-        //affichage du tableau
-        out.println(Arrays.toString(tab));
+        System.out.println("temps écoulé pour le tri de "+taille+" entiers = "+ (double)(momentFin - momentDebut)/1000000000d + " s");
+        //affiche les 10 premiers
+        for(int i=0; i<10; i++) out.print(tab[i] + ", ");
+        out.println();
 
     }
     /**fonction pour illustrer le tri de 100 millions d'entiers en parallele
@@ -119,7 +121,7 @@ public class TestsBase {
         Arrays.parallelSort(tab);
         long momentFin = System.nanoTime();
 
-        out.println("temps écoulé = "+ (double)(momentFin - momentDebut)/1000000000d + " s");
+        System.out.println("temps écoulé pour le tri de "+taille+" entiers en parallèle = "+ (double)(momentFin - momentDebut)/1000000000d + " s");
 
         //verificiations sur les 10 premiers
         for(int i=0; i<10; i++) out.print(tab[i] + ", ");
@@ -132,13 +134,20 @@ public class TestsBase {
         //listes statiques, ne peuvent varier
         List<Integer> liste1 = List.of(1, 2, 3, 4, 5);
         List<Integer> liste2 = List.of(4, 5, 6, 7, 8);
-        //Une liste modifiable, contenant une copie de la liste 1
-        ArrayList<Integer> union = new ArrayList<>(liste1);
-        //ajout de toute la liste 2
-        union.addAll(liste2);
         //affichage des listes
         out.println("liste1 = " +liste1);
         out.println("liste2 = " +liste2);
+        //Une liste modifiable, contenant une copie de la liste 1
+        ArrayList<Integer> ajout = new ArrayList<>(liste1);
+        //ajout de toute la liste 2
+        ajout.addAll(liste2);
+        out.println("concaténation = " +ajout);
+        //Une liste modifiable, contenant une copie de la liste 1
+        ArrayList<Integer> union = new ArrayList<>(liste1);
+        //retrait des éléments communs avec la liste 2
+        union.removeAll(liste2);
+        //ajout des éléments de la liste 2
+        union.addAll(liste2);
         out.println("union = " +union);
         //Une liste modifiable, contenant une copie de la liste 1
         ArrayList<Integer> intersection = new ArrayList<>(liste1);
@@ -180,7 +189,7 @@ public class TestsBase {
 
         val = users.put("yan", "yann");
         out.println("valeur associee precedemment à yan =" + val);
-        out.println("nvelle valeur associee  à yan =" + users.get("yan"));
+        out.println("nouvelle valeur associee  à yan =" + users.get("yan"));
     }
 
         /**
@@ -191,7 +200,7 @@ public class TestsBase {
      * @param tab3 tableau de sortie
      * @param f fonction (Integer, Integer)->Double
      * */
-    static void opeSurTab(Integer[] tab1, Integer[] tab2, Double[] tab3, BiFunction<Integer, Integer, Double> f)
+    static void opeSurTab(int[] tab1, int[] tab2, double[] tab3, BiFunction<Integer, Integer, Double> f)
     {
         //eviter de depasser les bornes
         int taille = Math.min(tab1.length, Math.min(tab2.length, tab3.length));
@@ -204,13 +213,17 @@ public class TestsBase {
      */
     static void testFonctionnel()
     {
-        Integer[]tab1 = new Integer[]{1,2,3,4,5,6};
-        Integer[]tab2 = new Integer[]{9,8,7,6};
-        Double[]tab3 = new Double[10];
-        opeSurTab(tab1, tab2, tab3, (a,b)->(double)a/b);
-        out.println("tab3 = " + Arrays.toString(tab3));
-        opeSurTab(tab1, tab2, tab3, (a,b)->(double)a+b);
-        out.println("tab3 = " + Arrays.toString(tab3));
+        int[]tabA = {2,5,4,3,1,7,8};
+        int[]tabB = {5,4,8, 2};
+        double[]tabC = new double[8];
+        System.out.println("tabA="+Arrays.toString(tabA));
+        System.out.println("tabB="+Arrays.toString(tabB));
+
+        opeSurTab(tabA, tabB, tabC, (a,b)->(double)a*b);
+        System.out.println("tabC=tabAxTabB ="+Arrays.toString(tabC));
+
+        opeSurTab(tabA, tabB, tabC, (a,b)->(double)a/b);
+        System.out.println("tabC=tabA/TabB ="+Arrays.toString(tabC));
     }
 
 
