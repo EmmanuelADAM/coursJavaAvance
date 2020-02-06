@@ -3,7 +3,8 @@
 ## TestsBase
 * fonction pour illustrer le cout de la creation d'objets
 * fonction qui compare les couts en tps de l'utilisation de String, StringBuilder et StringBuffer
- - exemple de sortie : ```
+ - exemple de sortie : 
+ ```
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 
   Concaténation de 60000 String par +, temps écoulé = 3326.877432 ms
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 
