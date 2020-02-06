@@ -23,10 +23,15 @@
 - fonction illustrant la creation d'un tableau, son affichage, son tri par lambda expression et sans boucles
   - exemple de sortie :
   ```
-  [152002, 9568190, 292521, 5327613, 6113032, 4556219, 8951493
-  temps écoulé pour le tri de 10000000 entiers = 1.405470849 s
-  [0, 1, 2, 2, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 10, 10, 11,
+  96863403, 90311323, 19108406, 50518617, 82411494, 91616917, 21814790, 49344932, 93615853, 75765243, 
+  temps écoulé pour le tri de 100000000 entiers = 13.151510906 s
+  0, 4, 7, 8, 9, 10, 12, 13, 13, 15, 
 - fonction pour illustrer le tri de 100 millions d'entiers en parallele
+  - exemple de sortie :
+  ```
+  74019091, 52268044, 27977908, 57592398, 16585235, 2273969, 36737277, 50142161, 41780788, 69067071, 
+  temps écoulé pour le tri de 100000000 entiers en parallèle = 6.198591867 s
+  3, 4, 8, 8, 10, 10, 11, 11, 11, 11, 
 - fonction qui illustre le fonctionnement de liste dynamiques et statiques
 - test de map String < - > String
 - exemple de fonction utilisant une fonction passee en parametre (programmation fonctionnelle (lambda))
