@@ -23,9 +23,9 @@
 - fonction illustrant la creation d'un tableau, son affichage, son tri par lambda expression et sans boucles
   - exemple de sortie :
   ```
-  [834265, 558990, 923009, 835446, 111715, 150432, 141141, 623
-  temps écoulé pour le tri de 1000000 entiers = 0.244182806 s
-  [0, 2, 3, 3, 5, 6, 6, 7, 8, 9, 10, 10, 10, 11, 11, 11, 14, 1
+  [152002, 9568190, 292521, 5327613, 6113032, 4556219, 8951493
+  temps écoulé pour le tri de 10000000 entiers = 1.405470849 s
+  [0, 1, 2, 2, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 10, 10, 11,
 - fonction pour illustrer le tri de 100 millions d'entiers en parallele
 - fonction qui illustre le fonctionnement de liste dynamiques et statiques
 - test de map String < - > String
