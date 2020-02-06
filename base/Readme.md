@@ -45,4 +45,18 @@
   6, 7, 8, 
   union sans les valeurs < 5 :[5, 6, 7, 8]
 - test de map String < - > String
+  - exemple de sortie :
+  ```
+  krol correspond a carole
+  al1 correspond a alain
+  yan correspond a yanice
+  valeur associee à krol=carole
+  valeur associee precedemment à yan =yanice
+  nouvelle valeur associee  à yan =yann
 - exemple de fonction utilisant une fonction passee en parametre (programmation fonctionnelle (lambda))
+  - exemple de sortie :
+  ```
+  tabA=[2, 5, 4, 3, 1, 7, 8]
+  tabB=[5, 4, 8, 2]
+  tabC=tabAxTabB =[10.0, 20.0, 32.0, 6.0, 0.0, 0.0, 0.0, 0.0]
+  tabC=tabA/TabB =[0.4, 1.25, 0.5, 1.5, 0.0, 0.0, 0.0, 0.0]
