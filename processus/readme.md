@@ -36,7 +36,7 @@
   fact[1] = 957391540294832002027614722000941251336135085932935459563196844422460451015364906387985902326752146410533027840000000000
   combi de 30 elements parmi 10000 = 3609354262844521281086173583674469373181460849385353937541082122453577570133286597008000
 
-# **TestSynchro** : contient deux classes permettant d'illustrer la notion de synchronisation, de mise en attente et de réveil
+- **TestSynchro** : contient deux classes permettant d'illustrer la notion de synchronisation, de mise en attente et de réveil
   - Exemple de sortie de programme : 
   ```
   02:31:01.790951 lancement de p1
