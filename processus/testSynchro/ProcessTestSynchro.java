@@ -1,3 +1,5 @@
+import java.time.LocalTime;
+
 /**classe créant des processus pour tester la notion de synchronisation
  * @author emmanuel adam
  * */
@@ -33,10 +35,12 @@ public class ProcessTestSynchro extends Thread{
 		Thread p1 = new Thread(()->classeSynchro.testPair(3), "p1");
 		Thread p2 = new Thread(()->classeSynchro.testPair(5), "p2");
 		Thread p3 = new Thread(()->classeSynchro.testPair(4), "p3");
+		System.out.println(LocalTime.now()+ " lancement de p1");
 		p1.start();
+		System.out.println(LocalTime.now()+ " lancement de p2");
 		p2.start();
 		try { Thread.sleep(5000); } catch (InterruptedException e) {e.printStackTrace();}
+		System.out.println(LocalTime.now()+ " lancement de p3");
 		p3.start();
-		
 	}
 }
