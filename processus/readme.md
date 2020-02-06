@@ -36,3 +36,18 @@
   fact[1] = 957391540294832002027614722000941251336135085932935459563196844422460451015364906387985902326752146410533027840000000000
   combi de 30 elements parmi 10000 = 3609354262844521281086173583674469373181460849385353937541082122453577570133286597008000
 
+# **TestSynchro** : contient deux classes permettant d'illustrer la notion de synchronisation, de mise en attente et de réveil
+  - Exemple de sortie de programme : 
+  ```
+  02:31:01.790951 lancement de p1
+  02:31:01.801028 lancement de p2
+  p1, je suis entré à 02:31:01.801256
+  le nb n'est pas pair, je mets en attente
+  p2, je suis entré à 02:31:03.807059
+  le nb n'est pas pair, je mets en attente
+  02:31:06.805848 lancement de p3
+  p3, je suis entré à 02:31:06.806624
+  le nb est pair
+  p3 sort de la fonction à 02:31:08.812298
+  p1 sort de la fonction à 02:31:08.812858
+  p2 sort de la fonction à 02:31:08.813171
