@@ -1,3 +1,5 @@
+package testSynchro;
+
 import java.time.LocalTime;
 
 /**classe créant des processus pour tester la notion de synchronisation
