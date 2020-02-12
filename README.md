@@ -1,5 +1,5 @@
 # Cours Java Avancé
-Quelques support au cours Java Avancé à l'ISTV - Université Polytechnique des Hauts-De-France
+Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique des Hauts-De-France
 
 ## [Base](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/base)
 * Contient des exemples de base de la programmation java (gestion de mémoire, d'objets, de tableaux, de liste, de lambda expression)
