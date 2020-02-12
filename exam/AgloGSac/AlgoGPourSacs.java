@@ -46,8 +46,8 @@ public class AlgoGPourSacs extends JPanel implements ActionListener{
 	private  AlgoGPourSacs()
 	{
 		hasard = new Random();
-		new CriteresSac();
-		nbSequenceAMuter = (int)(nbSequences  * CriteresSac.MutationDesSequences);
+		new CaracteristiquesSac();
+		nbSequenceAMuter = (int)(nbSequences  * CaracteristiquesSac.MutationDesSequences);
 		listeSequences = new ArrayList<>();
 		construireTableauGenome();
 		
@@ -102,7 +102,7 @@ public class AlgoGPourSacs extends JPanel implements ActionListener{
 		sb.append("meilleur sac composé de = ");
 		for(int i=0; i<listeMeilleur.length; i++)
 		{
-			if(listeMeilleur[i]==1) sb.append(CriteresSac.NOMS[i]).append(", ");
+			if(listeMeilleur[i]==1) sb.append(CaracteristiquesSac.NOMS[i]).append(", ");
 		}
 		println(sb.toString());
 		affichePoidsInteretSequence( meilleur);
@@ -115,10 +115,10 @@ public class AlgoGPourSacs extends JPanel implements ActionListener{
 		int[] sequence = s.getSequence();
 		double sommePoids = 0.0;
 		double sommeInterets = 0.0;
-		for(int j=0; j<CriteresSac.LongSequence; j++)
+		for(int j=0; j<CaracteristiquesSac.LongSequence; j++)
 		{
-			if(sequence[j]==1) sommePoids +=  CriteresSac.POIDS[j] ;
-			if(sequence[j]==1) sommeInterets += CriteresSac.INTERET[j] ;
+			if(sequence[j]==1) sommePoids +=  CaracteristiquesSac.POIDS[j] ;
+			if(sequence[j]==1) sommeInterets += CaracteristiquesSac.INTERET[j] ;
 		}
 		println("poids de la meilleure solution : "+  (sommePoids/1000) +" kg." );
 		println("intérêt de la meilleure solution :" + sommeInterets);
@@ -138,7 +138,7 @@ public class AlgoGPourSacs extends JPanel implements ActionListener{
 		int i=0;
 		while ( i<nbSequences)
 		{
-			Sequence seq = new Sequence(CriteresSac.LongSequence, CriteresSac.MutationDansSequence);
+			Sequence seq = new Sequence(CaracteristiquesSac.LongSequence, CaracteristiquesSac.MutationDansSequence);
 			seq.construireSequence();
 			seq.calculUtilite();
 			if (seq.getUtilite()!=Double.NEGATIVE_INFINITY)

@@ -91,11 +91,11 @@ public class Sequence implements Comparable<Sequence> {
         double sommeInterets = 0;
         for (int i = 0; i < longueurGene; i++) {
             if (genes[i] == 1) {
-                sommePoids += CriteresSac.PoidsUniformes.get(i);
-                sommeInterets += CriteresSac.InteretsUniformes.get(i);
+                sommePoids += CaracteristiquesSac.PoidsUniformes.get(i);
+                sommeInterets += CaracteristiquesSac.InteretsUniformes.get(i);
             }
         }
-        if (sommePoids > CriteresSac.MaxPoidsUnifie)
+        if (sommePoids > CaracteristiquesSac.MaxPoidsUnifie)
             utilite = Double.NEGATIVE_INFINITY;
         else
             utilite = sommeInterets - sommePoids;

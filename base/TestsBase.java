@@ -61,7 +61,6 @@ public class TestsBase {
         String ch = new String();
         for(int i=0; i<taille; i++)  ch += i + ", ";
         long momentFin  = System.nanoTime();
-        System.out.println(sb.substring(0, 30));
         System.out.println("Concaténation de "+taille+" String par +, temps écoulé = "+  (double)(momentFin - momentDebut)/1000000 + " ms");
 
         String sep = ", ";
