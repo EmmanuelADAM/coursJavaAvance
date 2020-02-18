@@ -1,6 +1,3 @@
-<link rel="stylesheet" href="https://emmanueladam.github.io/coursJavaAvance/assets/css/style.css?v=6f3eba0a9955a9403a2ce350acdc3c060856e5e0" media="screen" type="text/css"></link>
-<link rel="stylesheet" href="https://emmanueladam.github.io/coursJavaAvance/assets/css/print.css" media="print" type="text/css"></link>
-
 # Bases de Java
 (retour au site)[https://emmanueladam.github.io/coursJavaAvance/]
 
