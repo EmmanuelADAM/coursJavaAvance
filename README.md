@@ -6,6 +6,9 @@ Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique
 ## [Base](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/base)
 * Contient des exemples de base de la programmation java (gestion de mémoire, d'objets, de tableaux, de liste, de lambda expression)
 
+## [Util](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/util)
+* Contient des exemples de manipulations de tableaux, listes et flux de la programmation java (gestion de mémoire, d'objets, de tableaux, de liste en lambda expression)
+
 ## [Reseaux](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/reseau) 
 * Contient des exemples de base de la programmation réseau en java (Socket, ...)
 
