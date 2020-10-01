@@ -1,0 +1,4 @@
+package util;
+
+public enum Region //METROPOLITAINE
+{ ARA,BFC,BRE,CVL,COR,GES,HDF,IDF, NOR,NAQ,OCC,PDL,PAC,GP,GF,MQ,RE,YT; }

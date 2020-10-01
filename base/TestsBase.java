@@ -58,7 +58,7 @@ public class TestsBase {
         int taille = 60000;
         long momentDebut = System.nanoTime();
         //creation d’une chaine ch = 0, 1, …., 59999
-        String ch = new String();
+        String ch = "";
         for(int i=0; i<taille; i++)  ch += i + ", ";
         long momentFin  = System.nanoTime();
         System.out.println("Concaténation de "+taille+" String par +, temps écoulé = "+  (double)(momentFin - momentDebut)/1000000 + " ms");
