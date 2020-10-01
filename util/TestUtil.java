@@ -32,7 +32,7 @@ public class TestUtil {
     }
 
     /**exemple d'utilisation de Collections<br>
-     * tri et  affichage d'une liste d'objet*/
+     * tri et  affichage d'une liste d'objets*/
     static void triListeObjets(int taille) {
         ArrayList<Personne> liste = new ArrayList<>();
         Random hasard = new Random();
@@ -54,7 +54,7 @@ public class TestUtil {
 
 
     /**exemple d'utilisation de Collections<br>
-     * tris et  affichages d'une liste d'objet*/
+     * tris et  affichages d'une liste d'objets par utilisation de Comparator*/
     static void autresTrisListeObjets(int taille) {
         ArrayList<Personne> liste = new ArrayList<>();
         Random hasard = new Random();
