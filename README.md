@@ -15,6 +15,9 @@ Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique
 ## [Processus](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/processus)
 * Contient des exemples de programmation par processus en java
 
+## [Javafx](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/javafx)
+* Contient des exemples d'affichage, d'animations et de gestion d'événements en Java FX
+
 ## [FXML](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/fxml) 
 * Contient des exemples d'utilisation d'une fenêtre décrite par SceneBuilder en FXML. Voir les explications [sur ce site](http://emmanuel.adam.free.fr/site/spip.php?article143)
 
