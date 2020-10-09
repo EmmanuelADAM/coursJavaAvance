@@ -59,7 +59,13 @@ public class ObjetsMobilesJFX extends Application {
 /*      Path path = new Path();
       path.getElements().add(new MoveTo(150, 100));
       path.getElements().add(new LineTo(650, 300));
-      path.getElements().add(new LineTo(150, 500));*/
+      path.getElements().add(new LineTo(150, 500));
+      PathTransition pathTransition = new PathTransition(Duration.millis(2000), path
+              , rectangle);
+      pathTransition.setAutoReverse(true);
+      pathTransition.setCycleCount(Timeline.INDEFINITE);
+      pathTransition.play();
+      */
 /*      RotateTransition rt = new RotateTransition(Duration.millis(3000), rectangle);
       rt.setByAngle(180);
       rt.setCycleCount(-1);
