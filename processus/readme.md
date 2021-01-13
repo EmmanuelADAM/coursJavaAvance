@@ -51,3 +51,6 @@
   p3 sort de la fonction à 02:31:08.812298
   p1 sort de la fonction à 02:31:08.812858
   p2 sort de la fonction à 02:31:08.813171
+
+- **gestionStock** : contient l'exemple classique du problèmes des producteurs/consommateurs
+
