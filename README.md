@@ -19,7 +19,7 @@ Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique
 * Contient des exemples d'utilisation d'une fenêtre décrite par SceneBuilder en FXML. Voir les explications [sur ce site](http://emmanuel.adam.free.fr/site/spip.php?article143)
 
 ## [TP](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP) 
-* Contient des codes répondant à quelques points de programmation sur les TP
+* Contient des codes répondant à quelques points de programmation pour les TP
   * [Exemple de grille](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/ExempleJeu) : un exemple simple de création d'une grille de jeu interactive
-  * [Le compte est bon](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/CompteEstBon/) : exemple de résolution du problème par Java
+<!-- * [Le compte est bon](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/CompteEstBon/) : exemple de résolution du problème par Java -->
 
