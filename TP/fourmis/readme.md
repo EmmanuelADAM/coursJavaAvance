@@ -22,7 +22,7 @@ Environnement dynamique
 Ce type de comportement est à la base des [Algorithme_de_colonies_de_fourmis](https://fr.wikipedia.org/wiki/Algorithme_de_colonies_de_fourmis) pour la recherche de meileur chemin dans un vaste réseau, *etc.*
 
 <center>
-![Exemple simulation fourmis](./images/demoFourmis.png)
+![Exemple simulation fourmis](../images/demoFourmis.png)
 </center>
 
 ----
