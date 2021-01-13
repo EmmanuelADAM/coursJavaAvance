@@ -1,6 +1,6 @@
-package application;
+package fxmlExemple.application;
 
-import gui.ChoixCouleursControleur;
+import fxmlExemple.gui.ChoixCouleursControleur;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
@@ -16,14 +16,23 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.net.URL;
 
+/***
+ * classe appelant une fenetre de dialogue creee en FXML par SceneBuilder
+ * Exemple de dialogues pour la gestion de couleurs
+ * @author emmanueladam
+ */
 public class TestAppelFXML extends Application {
-    /** carre peint*/
+    /** carre */
     private static Rectangle carre;
-    /** cercle peint*/
+    /** cercle */
     private static Circle cercle;
 
+    /**couleur du carre*/
     private Color colCarre = Color.LIGHTGREEN;
+    /**couleur du cercle*/
     private Color colCercle = Color.DIMGRAY;
 
     /**
@@ -42,17 +51,18 @@ public class TestAppelFXML extends Application {
         // points de base des éléments graphiques
         Group root = new Group();
         // creer un menu
-        Menu mParam = new Menu("Paramètres");
+        Menu mParam = new Menu("Parametres");
         // creer un item de menu
         MenuItem miCol = new MenuItem("couleurs");
         //lui definir une action
         miCol.setOnAction(e->choixCouleurs(primaryStage));
         //l'ajouter au menu
         mParam.getItems().add(miCol);
+
         // creer une barre de menu
         MenuBar mb = new MenuBar();
         // ajout du menu a la barre
-        mb.getMenus().add(mParam);
+        mb.getMenus().addAll(mParam);
 
         // creation d'une mise en forme verticale du menu
         VBox vb = new VBox(mb);
@@ -73,14 +83,13 @@ public class TestAppelFXML extends Application {
      * @param primaryStage theatre de l'application*/
     private void choixCouleurs(Stage primaryStage)
     {
-        //chargement du fichier FXML
-        String sceneFile = "/gui/ChoixCouleursGui.fxml";
+        FXMLLoader fxmlLoader = null;
         AnchorPane page = null;
-        FXMLLoader fxmlLoader =null;
         try
         {
-            fxmlLoader = new FXMLLoader(getClass().getResource( sceneFile ));
-            page =fxmlLoader.load();
+            URL url = new File("src/coursFXML/gui/ChoixCouleursGui.fxml").toURI().toURL();
+            fxmlLoader = new FXMLLoader(url);
+            page = fxmlLoader.load();
         }
         catch ( Exception ex )  {ex.printStackTrace();}
 
@@ -121,7 +130,7 @@ public class TestAppelFXML extends Application {
         fill();
     }
 
-    /**remplissage des elements graphiques*/
+    /**remplissage des elements graphiques par des couleurs*/
     public void fill()
     {
         carre.setFill(colCarre);
