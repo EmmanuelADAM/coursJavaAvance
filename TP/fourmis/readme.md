@@ -67,7 +67,7 @@ Le code fourni permet de lancer des fourmis (appuyer sur "f" pour ajouter une no
 Les fourmis restent dans ce code "scotchées" à la zone de nourriture..
 
 A vous de programmer le ramassage de nourriture, le retour au nid et le dép^t de phéromones.. (l'affichage est déjà programmé).
-Remplisser pour cela les points indiqués TODO: de préférence dans l'ordre suivant : 
+<span class="bg-info">**Remplisser pour cela les points indiqués TODO:**</span>, de préférence dans l'ordre suivant : 
 
 ### Etapes
 1. compléter l'énumération Direction
