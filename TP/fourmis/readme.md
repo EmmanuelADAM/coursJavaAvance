@@ -63,6 +63,9 @@ Pour plus de réallisme, une foumi possède une direction, et est situé sur une
 D'après le tableau précédent, une foumi en (1,1) se dirigeant vers le Nord regarde aux cases (0,1) (Ouest), (0,0) (Nord-Ouest), (1,0) (Nord), (2,0) (Nord-Est), (2,1) (Est), s'il y a  de la nourriture ou de la phéromone.
 - Si elle n'en trouve pas, la foumi prend une direction au hasard entre Nord-Ouest, Nord et Nord-Est et avance vers la case suivante.
 
+---
+## Travail à rendre
+
 Le code fourni permet de lancer des fourmis (appuyer sur "f" pour ajouter une nouvelle fourmi au centre) et de les faire se déplacer aléatoirement.
 Les fourmis restent dans ce code "scotchées" à la zone de nourriture..
 
