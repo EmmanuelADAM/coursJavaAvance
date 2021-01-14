@@ -69,7 +69,7 @@ D'après le tableau précédent, une foumi en (1,1) se dirigeant vers le Nord re
 Le code fourni permet de lancer des fourmis (appuyer sur "f" pour ajouter une nouvelle fourmi au centre) et de les faire se déplacer aléatoirement.
 Les fourmis restent dans ce code "scotchées" à la zone de nourriture..
 
-A vous de programmer le ramassage de nourriture, le retour au nid et le dép^t de phéromones.. (l'affichage est déjà programmé).
+A vous de programmer le ramassage de nourriture, le retour au nid et le dépôt de phéromones.. (l'affichage est déjà programmé).
 : <span style="background-color: #ffff99;">**Remplisser pour cela les points indiqués TODO:**</span>, de préférence dans l'ordre suivant : 
 
 ### Etapes
