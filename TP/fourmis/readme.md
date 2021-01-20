@@ -63,17 +63,21 @@ Pour plus de réallisme, une foumi possède une direction, et est situé sur une
 D'après le tableau précédent, une foumi en (1,1) se dirigeant vers le Nord regarde aux cases (0,1) (Ouest), (0,0) (Nord-Ouest), (1,0) (Nord), (2,0) (Nord-Est), (2,1) (Est), s'il y a  de la nourriture ou de la phéromone.
 - Si elle n'en trouve pas, la foumi prend une direction au hasard entre Nord-Ouest, Nord et Nord-Est et avance vers la case suivante.
 
-Le code fourni permet de lancer des fourmis (appuyer sur "f" pour ajouter une nouvelle fourmi au centre) e tde les faire se déplacer aléatoirement.
+---
+## Travail à rendre
 
-A vous de progerammer le le ramassage de nourriture, le retour au nid et le depot de phéromones..
-(remplisser pour cela les poinst indiqués TODO:).
+Le code fourni permet de lancer des fourmis (appuyer sur "f" pour ajouter une nouvelle fourmi au centre) et de les faire se déplacer aléatoirement.
+Les fourmis restent dans ce code "scotchées" à la zone de nourriture..
+
+A vous de programmer le ramassage de nourriture, le retour au nid et le dépôt de phéromones.. (l'affichage est déjà programmé).
+: <span style="background-color: #ffff99;">**Remplisser pour cela les points indiqués TODO:**</span>, de préférence dans l'ordre suivant : 
 
 ### Etapes
-- compléter l'énumération Direction
-- permettre à iune fourmi de ramasser de la nourriture et de faire demi tour
-- permettre à une fourmi de poser une goute de pheromone lorsquelle n'est pas vide.
-- faire dilluer et dégrader la phéromone
-- orienter la fourmi selon les odeurs de nourriture, de phéromone ou de nid..
+1. compléter l'énumération Direction
+2. permettre à une fourmi de ramasser de la nourriture et de faire demi tour
+3. permettre à une fourmi de poser une goute de pheromone lorsquelle n'est pas vide.
+4. faire dilluer et dégrader la phéromone
+5. orienter la fourmi selon les odeurs de nourriture, de phéromone ou de nid..
 
 
 -----
