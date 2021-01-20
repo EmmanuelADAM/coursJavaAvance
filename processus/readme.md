@@ -52,5 +52,6 @@
   p1 sort de la fonction à 02:31:08.812858
   p2 sort de la fonction à 02:31:08.813171
 
-- **gestionStock** : contient l'exemple classique du problèmes des producteurs/consommateurs
+- **gestionStock** : contient l'exemple classique du problème des producteurs/consommateurs
 
+- **dinerPhilosophes**: contient l'exemple classique du problème du dîner des philosophes
