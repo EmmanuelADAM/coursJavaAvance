@@ -1,7 +1,7 @@
 package util;
 
 /**simple classe pour illustrer la recherche multi-criteres via programmation fonctionnelle en Java.
- * Une boite contient trois valeurs reelles
+ * Une boite contient trois valeurs reelles 
  * @author emmanuel adam
  * */
 public class Boite {

@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.function.Function;
 
 /**fonction qui illustre la recherche d'elements par programmation fonctionnelle.
- * Ici, on va rechercher des boites selon les champs hauteurs, largeurs, ....*/
+ * Ici, on va rechercher des boites selon les champs hauteurs, largeurs, ...*/
 public class TestBoites {
 
     TestBoites(){}
