@@ -18,3 +18,4 @@ extractions et filrage de liste
 - `static void testStream()` : gestion de donnees via des streams :
  recherche, extraction, conversion en tableau, en map, ...
 
+- la classe `TestBoites` associée à `Boite` illustre la recherche multi-critères à l'aide de la programmation fonctionnelle
