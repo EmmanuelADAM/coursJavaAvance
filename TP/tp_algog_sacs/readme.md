@@ -100,9 +100,9 @@ Travaillez sur le code Sequence.java.
 
 Définissez la fonction de la classe Sequence ``Sequence croiserSequence(Sequence autre)`` qui retourne le résultat du croisement de la séquence avec un autre.
 
-Ex. si la séquence possède <span style="color: red"> **g0g1g2g3g4g5**</span>
-et qu'une autre séquence s2 possède <span style="color: blue"> **g0g1g2g3g4g5**</span> 
-alors le croisement retourne une séquence qui possède <span style="color: blue"> **g0g1g2**</span><span style="color: red"> **g3g4g5**</span>.
+Ex. si la séquence ``a`` possède **a0a1a2a3a4a5**
+et qu'une autre séquence ``b`` possède **b0b1b2b3b4b5**
+alors le croisement retourne une séquence qui possède **a0a1a2b3b4b5**.
 Le calcul de l'utilité est lancé sur cette séquence fille.
 
 >N.B. Il suffit de créer une nouvelle séquence avec la même longueur de séquence et le même taux de gènes mutants que ses 'parents' et de remplir son tableau de gènes de moitié de ses parents.<br>
