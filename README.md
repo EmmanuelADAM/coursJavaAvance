@@ -23,6 +23,6 @@ Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique
 
 ## [TP](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP) 
 * Des énoncés et des éléments de solution pour les TPs de Java
-* [TP Algo génétique 1](coursJavaAvance/TP/tp_algog_sacs/) : TP sur la programmation d'un algorithme génétique pour le problème du sac à dos
+* [TP Algo génétique 1](https://github.com/EmmanuelADAM/coursJavaAvance/TP/tp_algog_sacs/) : TP sur la programmation d'un algorithme génétique pour le problème du sac à dos
 * [Exemple de grille](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/ExempleJeu) : un exemple simple de création d'une grille de jeu interactive
 * [Le compte est bon](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/CompteEstBon/) : exemple de résolution du problème par Java
