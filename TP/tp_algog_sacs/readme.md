@@ -27,16 +27,16 @@ Ce type d'algorithme est générique et s'applique à tout type de problème; le
 
 ### Le problème
 Remplir un sac à dos d'un capacité maximale 10kg avec des objets, chacun possédant un poids et un intérêt propre.
-Il existe 52 objets possibles (de A1 à Z2).
+Il existe 104 objets possibles (de A1 à Z3).
 
 Parmi toutes les combinaisons possibles, on recherche celle dont le couple (légèreté, intérêt) est le plus intéressant. Il s'agit donc ici d'une recherche bi-critère.
 
-Si 52 objets peuvent être choisis, il y a en tout 2<sup>52</sup> sacs possibles (4 503 599 627 370 496 sacs). 
+Si 52 objets peuvent être choisis, il y a en tout 2<sup>104</sup> sacs possibles (20 282 409 603 651 670 423 947 251 286 016 sacs, donc environ 20 millions de millards de millards sacs différents). 
 Les construire tous pour tous les évaluer est coûteux en temps et en espace.
 
 Les algorithmes génétiques permettent d'approcher d'une bonne solution en étant peu couteux : quelques sacs sont générés puis les meilleurs se croisent pour donner naissance à de nouveaux sacs, etc..
 
-Une séquence génétique sera codée ici sous forme d'un tableau de 52 entiers dans 0,1. 
+Une séquence génétique sera codée ici sous forme d'un tableau de 104 entiers dans 0,1. 
 1 signifiant la presence d'un objet dans le sac.
 Ainsi genes = [1,1,0,0,1,0, ...] signifie que le sac comporte les objets 0,1,4, ....
 
@@ -52,7 +52,7 @@ On veillera aussi à fortement pénaliser les sac dépassant le seuil des 10kg
 ---
 ### Caractéristique des sacs
 Les objets pouvant être dans les sacs sont stockés dans une énumération (cf. code source). 
-Ils se nomment A1, B1, ... Z2. Il y a donc 52 objets possibles.
+Ils se nomment A1, B1, ... Z3. Il y a donc 104 objets possibles.
 
 Dans cette énumération, 
 - poids est le poids de l'objet
