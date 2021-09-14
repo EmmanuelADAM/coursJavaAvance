@@ -1,3 +1,5 @@
+package tp_algog_sacs;
+
 import java.util.*;
 
 import static java.lang.System.out;
