@@ -70,7 +70,8 @@ Le code fourni permet de lancer des fourmis (appuyer sur "f" pour ajouter une no
 Les fourmis restent dans ce code "scotchées" à la zone de nourriture..
 
 A vous de programmer le ramassage de nourriture, le retour au nid et le dépôt de phéromones.. (l'affichage est déjà programmé).
-: <span style="background-color: #ffff99;">**Remplisser pour cela les points indiqués TODO:**</span>, de préférence dans l'ordre suivant : 
+: 
+<span style="background-color: #ffff99;">**Remplisser pour cela les points indiqués TODO:**</span>, de préférence dans l'ordre suivant : 
 
 ### Etapes
 1. compléter l'énumération Direction
@@ -78,6 +79,9 @@ A vous de programmer le ramassage de nourriture, le retour au nid et le dépôt 
 3. permettre à une fourmi de poser une goute de pheromone lorsquelle n'est pas vide.
 4. faire dilluer et dégrader la phéromone
 5. orienter la fourmi selon les odeurs de nourriture, de phéromone ou de nid..
+6. ajouter une gestion d'événement souris : un clic sur la scene ajoute une zone de nourriture
+7. ajouter une gestion d'événement combinée : un clic sur la scene avec la touche 'Control' appuyée ajoute une petite zone de danger
+8. La zone de danger émet une odeur répulsive, les fourmis refusent d'y aller si l'odeur de danger dépasse un seuil... 
 
 
 -----
