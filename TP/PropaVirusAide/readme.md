@@ -78,7 +78,7 @@ Une personne n'est pas directement contaminée si elle est en présence d'une pe
 
 ---
 
-## Question 5 : Tailles des batiments
+## Question 4 : Tailles des batiments
 
 Les entreprises et magasins ont maintenant des tailles, de 1 à 10.
 
@@ -94,7 +94,7 @@ Le temps de repas est de 1h de 12 h à 13h. Tous les travailleurs se répartisse
 
 
 -----
-## Question 6 : Incubation
+## Question 5 : Incubation
 
 Maintenant lorsque l'on clique sur une personne, est est contaminée; elle deviendra malade au bout de 3 jours; mais peut contaminer d'autres personnes pendant ce temps.
  - Une personne peut contaminer au plus 3 personnes qu'elle croise une heure
