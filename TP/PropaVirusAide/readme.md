@@ -44,3 +44,71 @@ L'environnement possède une liste de lieux maintenant, ainsi que des Map (Hasht
 Quant une personne se déplace à une position x,y, elle se retire du lieu actuel pour s'ajouter au lieu à la position x,y.
 Une Personne contient un champs activite de type Activite qui est un énumération possédant les champs Repos, Travail, Course.
  
+---
+Initialement, il y a 2 personnes par domicile, et nulle part ailleurs
+
+SCENARIO : Les Personnes maintenant effectue le cycle suivant : Repos, Travail, Course.  
+ - En Repos, la personne va à SON domicile, en Travail, elle va dans une place de travail aléatoire, en Course, elle va dans un magasin au hasard. Ce scénario sera plus réaliste par la suite
+  
+La personne ne va plus errer, mais à la place va "sactiver" : cette fonction avance la personne dans les activités cycle (repos, travail, course) et positionne la personne dans les places adaptées (Domicile, Entreprise, Magasin).
+
+----
+*Dialogue FXML*
+  
+Pour mieux voir l'évolution, on utilise une fenêtre détachée.
+On décide de la réaliser en FXML.
+
+Cette boite de dialogue sera ici très simple : 2 champs textes indiquant l'un le nb de personnes, l'autre le nb de personne infectées.
+
+Par exemple, dans la classe principale de l'application, créer la fonction void construirePetitTheatre(Stage primaryStage) qui reprend le code de choixCouleurs(Stage primaryStage) du site. La fenêtre sera amodale (dialogStage.initModality(Modality.NONE);).
+
+----
+  
+aintenant, qu'il existe des places domicile, travail, course; il est possible d'aller plus loin : éducation, sport, art, restauration, bar, sorties, .....
+
+Nous allons juste ajouter un type restauration pour les restaurants d'entreprise (un magasin est aussi une entreprise, mais on reste sur une simulation grossière pour l'instant).
+
+-----
+
+*Séparation du temps*
+
+La journée maintenant est découpée en 24 heures : 24 cycles.
+On va poser le principe suivant :
+ - de 9h à 17h au travail
+ - de 17h à 21h au magasin (ou pas, 1 chance / 3, sinon elle rentre directement chez elle)
+ - de 21h à 9h chez soi.
+  
+Une personne n'est pas directement contaminée si elle est en présence d'une personne malade; mais elle a ----
+
+---
+
+*Tailles des batiments*
+
+Les entreprises et magasins ont maintenant des tailles, de 1 à 10.
+
+Une entreprise de taille 1 occupe 1 point, taille 2 : 2 points consécutifs, ... taille 4 : carre de 2x2... de taille 10 : 10 points (organisés en blocs 5x2)
+Les entreprises peuvent aussi simplement être rangées en 1 ligne (ligne de 10 points par exemple) si vous trouvez cela plus simple (et ça l'est).
+Sur un point (une place) peuvent être placée 6 personnes maximum.
+
+Tous les points de la zone supérieure ne sont pas nécessairement entreprise ou magasin, certains peuvent être vides.
+
+Pour une entreprise, 1/4 des points est réservé au restaurant d'entreprise (pour les entreprises <= 4 points, 1 point est utilisé pour cela (dont le point unique pour en entreprise de taille 1).
+
+Le temps de repas est de 1h de 12 h à 13h. Tous les travailleurs se répartissent dans les points restaurant de leur entreprise à ce créneau.
+
+----
+
+*Incubation*
+
+Maintenant lorsque l'on clique sur une personne, est est contaminée; elle deviendra malade au bout de 3 jours; mais peut contaminer d'autres personnes pendant ce temps.
+ - Une personne peut contaminer au plus 3 personnes qu'elle croise une heure
+ - Une personne malade revient chez elle pour un espoir de guérison sous 15 j.
+Ajouter à l'interface le bouton quarantaine.
+
+Lorsque la quaraine est activée; un personne malade retourne à son domicile, et ses contacts avec lesquels elle a passé plus d'une heure également (contaminés ou non).
+
+Vous vérifierez ainsi l'intérêt de ce principe sur le temps de propagation du virus.
+
+Aussi, vous créerez un bouton "switch resto" qui active ou désactive  les restaurants d'entreprise. Quel est l'impact sur le temps de propagation ?
+
+  
