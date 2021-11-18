@@ -3,6 +3,10 @@
 Le but du TP est de simuler la propagation de virus entre personnes. Plusieurs personnes peuvent partager un même emplacement (habitation, magasin, lieu de travail).
 Si une personne malade partage le même emplacament qu'une autre pendant un certain temps; elle lui transmet le virus.
 
+*NB. Le code utilise JavaFX. Il vous faut donc posséder la librairie téléchargeable [ici](https://gluonhq.com/products/javafx/).
+De plus, pour lancer l'application, il vous faut préciser dans les options de la machine virtuelle Java (JVM) les chemins d'accès.*
+  - *Exemple : --module-path MONREPERTOIRE/javafx-sdk/lib --add-modules=javafx.controls,javafx.fxml*
+
 ----
 
 Ce code de départ du TP sur la programmation de virus. 
