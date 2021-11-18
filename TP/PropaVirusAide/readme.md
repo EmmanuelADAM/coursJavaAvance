@@ -20,8 +20,10 @@ Au bout de 4 pauses dans la même place qu'une personne contagieuse, une personn
 
 ---
 Les places sont dans un premier temps distiguées : Domicile, Entreprise, Magasin.
-- Créez donc une énumération TypeLieu qui contient ces types; et une classe Lieu. Cette classe contient :
+Créez donc une énumération TypeLieu qui contient ces types; et une classe Lieu. 
+ 
 
+Cette classe contient :
  - Point pos : position dans la grille (pas en pixel)
  - TypeLieu type : type de lieu
  - List personnes : liste de personnes dans le lieu
