@@ -66,7 +66,7 @@ Par exemple, dans la classe principale de l'application, créer la fonction void
 
 ----
 
-## Question 3 : Séparation du temps*
+## Question 3 : Séparation du temps
 
 La journée maintenant est découpée en 24 heures : 24 cycles.
 On va poser le principe suivant :
@@ -94,7 +94,7 @@ Le temps de repas est de 1h de 12 h à 13h. Tous les travailleurs se répartisse
 
 
 -----
-## Question 6 : Incubation*
+## Question 6 : Incubation
 
 Maintenant lorsque l'on clique sur une personne, est est contaminée; elle deviendra malade au bout de 3 jours; mais peut contaminer d'autres personnes pendant ce temps.
  - Une personne peut contaminer au plus 3 personnes qu'elle croise une heure
