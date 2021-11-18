@@ -19,6 +19,8 @@ Au bout de 4 pauses dans la même place qu'une personne contagieuse, une personn
   - A vous de poursuivre pour l'énoncé suivant du TP.....
 
 ---
+## Question 1 : Distinguer les places
+
 Les places sont dans un premier temps distiguées : Domicile, Entreprise, Magasin.
 Créez donc une énumération TypeLieu qui contient ces types; et une classe Lieu. 
  
@@ -53,7 +55,7 @@ SCENARIO : Les Personnes maintenant effectue le cycle suivant : Repos, Travail, 
 La personne ne va plus errer, mais à la place va "sactiver" : cette fonction avance la personne dans les activités cycle (repos, travail, course) et positionne la personne dans les places adaptées (Domicile, Entreprise, Magasin).
 
 ----
-*Dialogue FXML*
+## Question 2 : Dialogue FXML
   
 Pour mieux voir l'évolution, on utilise une fenêtre détachée.
 On décide de la réaliser en FXML.
@@ -63,14 +65,8 @@ Cette boite de dialogue sera ici très simple : 2 champs textes indiquant l'un l
 Par exemple, dans la classe principale de l'application, créer la fonction void construirePetitTheatre(Stage primaryStage) qui reprend le code de choixCouleurs(Stage primaryStage) du site. La fenêtre sera amodale (dialogStage.initModality(Modality.NONE);).
 
 ----
-  
-aintenant, qu'il existe des places domicile, travail, course; il est possible d'aller plus loin : éducation, sport, art, restauration, bar, sorties, .....
 
-Nous allons juste ajouter un type restauration pour les restaurants d'entreprise (un magasin est aussi une entreprise, mais on reste sur une simulation grossière pour l'instant).
-
------
-
-*Séparation du temps*
+## Question 3 : Séparation du temps*
 
 La journée maintenant est découpée en 24 heures : 24 cycles.
 On va poser le principe suivant :
@@ -82,7 +78,7 @@ Une personne n'est pas directement contaminée si elle est en présence d'une pe
 
 ---
 
-*Tailles des batiments*
+## Question 5 : Tailles des batiments
 
 Les entreprises et magasins ont maintenant des tailles, de 1 à 10.
 
@@ -96,9 +92,9 @@ Pour une entreprise, 1/4 des points est réservé au restaurant d'entreprise (po
 
 Le temps de repas est de 1h de 12 h à 13h. Tous les travailleurs se répartissent dans les points restaurant de leur entreprise à ce créneau.
 
-----
 
-*Incubation*
+-----
+## Question 6 : Incubation*
 
 Maintenant lorsque l'on clique sur une personne, est est contaminée; elle deviendra malade au bout de 3 jours; mais peut contaminer d'autres personnes pendant ce temps.
  - Une personne peut contaminer au plus 3 personnes qu'elle croise une heure
