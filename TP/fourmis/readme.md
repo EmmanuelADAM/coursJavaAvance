@@ -86,12 +86,12 @@ A vous de programmer le ramassage de nourriture, le retour au nid et le dépôt 
 6. ajouter une gestion d'événement souris : un clic sur la scene ajoute une zone de nourriture
 
 ### A créer
-1. ajouter un menu contenant le l'item (configuration)
+1. ajouter un menu contenant un item ('configuration')
   - Cet item affiche une fenêtre réalisée en FXML (cf. les explication sur FXML [ici](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/fxml) et le code de fxmlExemple.
-  - Cette fenêtre affiche deux glisseurs : pour régler la vitesse de dégradation (évaporation) et la dillution
+  - Cette fenêtre amodale affiche deux glisseurs : pour régler la vitesse de dégradation (évaporation) et la dillution
 2. ajouter une gestion d'événement combinée : un clic sur la scene avec la touche 'Control' appuyée ajoute une petite zone de danger
 3. La zone de danger émet une odeur répulsive, les fourmis refusent d'y aller si l'odeur de danger dépasse un seuil... 
-4. Maintenant, un clic combiné avec touche ``Shift``  ajoute un prédateur qui erre dans l'environnement. Il emet une phéromone de danger et les fourmis chervhent à l'éviter tout en poursuivant leurs tâches si possible.. 
-
+4. Maintenant, un clic combiné avec touche ``Shift``  ajoute un prédateur qui erre dans l'environnement. Il emet une phéromone de danger et les fourmis cherchent à l'éviter tout en poursuivant leurs tâches si possible.. 
+---
 
 -----
