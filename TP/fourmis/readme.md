@@ -89,14 +89,14 @@ A vous de programmer le ramassage de nourriture, le retour au nid et le dépôt 
 1. ajouter un menu contenant un item ('configuration')
   - Cet item affiche une fenêtre réalisée en FXML (cf. les explication sur FXML [ici](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/fxml) et le code de fxmlExemple.
   - Cette fenêtre amodale affiche deux glisseurs : pour régler la vitesse de dégradation (évaporation) et la dillution
-2. ajouter une gestion d'événement combinée : un clic sur la scene avec la touche 'Control' appuyée ajoute une petite zone de danger
+2. ajouter une gestion d'événement combinée : un clic sur la scene avec la touche ``Control`` appuyée ajoute une petite zone de danger
 3. La zone de danger émet une odeur répulsive, les fourmis refusent d'y aller si l'odeur de danger dépasse un seuil... 
 4. Maintenant, un clic combiné avec touche ``Shift``  ajoute un prédateur qui erre dans l'environnement. Il emet une phéromone de danger et les fourmis cherchent à l'éviter tout en poursuivant leurs tâches si possible.. 
 ---
 
 En plus des dangers, ajouter des obstacles. 
  - Une case de type obstacle ne laisse passer aucune odeur de nid, de nourriture, de danger, de phéromones..
- - Un clic souris + un appui sur la touche ¨shift¨ permet d'ajouter des obstacles.
+ - Un clic souris + un appui sur les touches ``Control`` et ``Shift`` permet d'ajouter des obstacles.
  - Vous créerez une ligne d'obstacles initiale comme dans la figure ci-dessous..
 
 
