@@ -104,5 +104,27 @@ En plus des dangers, ajouter des obstacles.
      <img src="https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TP/images/simuFourmisObstacle.png" alt=""> 
 </center>
 
-
 -----
+## Système proie-prédateur
+
+Initialement, 50 fourmis sont lancées, 5 zones de nourritures sont posées; 5 enemis sont lancés.
+- Nid : 
+  - La nourriture du nid est initialisée à 100
+  - Pour chaque 10 points de nourritures rentrés au nid, 1 nouvelle fourmi est crée.
+  - La nourriture disparait de 1 point à chaque top. 
+- Fourmi
+- Prédateur
+  - S'il n'y plus de nourriture au nid, 1 fourmi meurt à chauqe top
+  - Un nouveau prédateur possède 100 points de nourriture
+  - Un  prédateur mange la fourmi sur sa case; ce qui lui rapporte 10 points de nourritures
+  - Si un prédacteur a 120 points de nourriture, il crée un nouveau prédateur et partage sa nourriture avec lui.
+  - Un prédateur perd 1 point de nourriture à chaque top, il meurt lorsqu'il n'a plus de nourriture
+- Zone de nourriture
+  - Une zone de nourriture met 50 étapes à se reconstituer
+
+Ceci est le principe du modèle proie-prédateur. Il est utilisé pour mesurer, évaluer l'équilibre entre des populations d'animaux..
+- Trop de consommateurs assèchent l'environnement, entraînent l'arrivée de nouveaux prédateurs. Les consomateurs meurent ensuite de faim et de chasse, et donc leurs prédateurs sans proies meurent également; l'environnement se reconstiue ensuite sans présence d'être vivants.
+- Trop de prédateurs mangent les consommateurs et meurent ensuite par manque de proies.
+----
+
+
