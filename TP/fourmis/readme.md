@@ -2,7 +2,7 @@
 
 Les fourmis communiquent souvent indirectement via l'environnement sur lequel elles dispersent des goutent de phéromones indiquant la proximité d'une source de nourriture, de matériaux, étenvuellement de danger.
 
-Il s'agit du princie de **stigmergie**, un principe de coordination indirecte.
+Il s'agit du principe de **stigmergie**, un principe de coordination indirecte.
 
 Lorsqu'une fourmi *cherche de la nourriture*, 
 - elle cherche autour d'elle la parcelle de terrain ayant le plus grand nombre de nourriture, 
@@ -34,13 +34,14 @@ De plus, pour lancer l'application, il vous faut préciser dans les options de l
 
 L'application sera effectuée en JavaFX..
 Des codes sont déjà présents : 
-- application/SimuFourmis.Java est la classe principale. Elle dessine la fenêtre, les parcelles, gère les interactions avec l'utilisateur et crée le tempo qui lance à chaque top les actions suivantes : 
-  -  evt.avancer(); //demande à chaque fourmi de bouger
-  - evt.diffuser(); // demande à chaque parcelle de diffuser sa phéromone le cas échéant
-  - evt.evaporer(); // demande à chaque parcelle de dégrader sa phéromone le cas échéant
-  - updateMatrice(); // demande la mise à jour des couleurs des cases
-  
-- gui/ImgParcelle.java : est une représentation d'une parcelle de terrain. Elle contient 2 rectangles de couleurs : le fond, et une case blanche plus ou moins transparente en fonction de la dose de phéromone
+- ```application/SimuFourmis.Java``` est la classe principale. Elle dessine la fenêtre, les parcelles, gère les interactions avec l'utilisateur et crée le tempo qui lance à chaque top les actions suivantes :  
+  - ```java
+evt.avancer(); //demande à chaque fourmi de bouger`
+evt.diffuser(); // demande à chaque parcelle de diffuser sa phéromone le cas échéant
+evt.evaporer(); // demande à chaque parcelle de dégrader sa phéromone le cas échéant
+updateMatrice(); // demande la mise à jour des couleurs des cases
+```  
+- ```gui/ImgParcelle.java : est une représentation d'une parcelle de terrain. Elle contient 2 rectangles de couleurs : le fond, et une case blanche plus ou moins transparente en fonction de la dose de phéromone
 
 - modele/Direction.java : est une classe énumérée représentant les 8 directions possibles d'une foumi (Nord, Nord-Est, Est, Sud-Est, Sud, Sud-Ouest, Ouest, Nors-Ouest)
 - modele/TypeParcelle.java : est une classe énumérée représentant le  de la foumi (Terrain, Nid, Nourriture)
@@ -114,7 +115,7 @@ Initialement, 50 fourmis sont lancées, 5 zones de nourritures sont posées; 5 e
   - La nourriture disparait de 1 point à chaque top. 
 - Fourmi
 - Prédateur
-  - S'il n'y plus de nourriture au nid, 1 fourmi meurt à chauqe top
+  - S'il n'y plus de nourriture au nid, 1 fourmi meurt à chaque top
   - Un nouveau prédateur possède 100 points de nourriture
   - Un  prédateur mange la fourmi sur sa case; ce qui lui rapporte 10 points de nourritures
   - Si un prédacteur a 120 points de nourriture, il crée un nouveau prédateur et partage sa nourriture avec lui.
