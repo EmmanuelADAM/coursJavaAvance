@@ -2,6 +2,7 @@
 
 Les fourmis communiquent souvent indirectement via l'environnement sur lequel elles dispersent des goutent de phéromones indiquant la proximité d'une source de nourriture, de matériaux, étenvuellement de danger.
 
+
 Il s'agit du principe de **stigmergie**, un principe de coordination indirecte.
 
 Lorsqu'une fourmi *cherche de la nourriture*,
@@ -77,7 +78,7 @@ Les fourmis restent dans ce code "scotchées" à la zone de nourriture..
 
 A vous de programmer le ramassage de nourriture, le retour au nid et le dépôt de phéromones... (l'affichage est déjà programmé).
 : 
-<span style="background-color: #ffff99;">**Remplisser pour cela les points indiqués TODO:**</span>, de préférence dans l'ordre suivant : 
+<span style="background-color: #abcdef;">**Remplisser pour cela les points indiqués TODO:**</span>, de préférence dans l'ordre suivant : 
 
 ### Etapes
 1. compléter l'énumération Direction
@@ -87,19 +88,34 @@ A vous de programmer le ramassage de nourriture, le retour au nid et le dépôt 
 5. orienter la fourmi selon les odeurs de nourriture, de phéromone ou de nid...
 6. ajouter une gestion d'événement souris : un clic sur la scene ajoute une zone de nourriture
 
+[x]<span style="background-color: #fedcba;"> **-> 5 points si cette partie fonctionne**</span>
+
 ### A créer
 1. ajouter un menu contenant un item ('configuration')
   - Cet item affiche une fenêtre réalisée en FXML (cf. les explication sur FXML [ici](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/fxml) et le code de fxmlExemple.
   - Cette fenêtre a-modale affiche deux glisseurs : pour régler la vitesse de dégradation (évaporation) et la dillution
+
+[x] <span style="background-color: #fedcba;"> **-> 5 points si cette partie fonctionne**</span>
+
 2. ajouter une gestion d'événement combinée : un clic sur la scene avec la touche ``Control`` appuyée ajoute une petite zone de danger
-3. La zone de danger émet une odeur répulsive, les fourmis refusent d'y aller si l'odeur de danger dépasse un seuil... 
-4. Maintenant, un clic combiné avec touche ``Shift``  ajoute un prédateur qui erre dans l'environnement. Il émet une phéromone de danger et les fourmis cherchent à l'éviter tout en poursuivant leurs tâches si possible... 
+3. La zone de danger émet une odeur répulsive, les fourmis refusent d'y aller si l'odeur de danger dépasse un seuil...
+
+[x] <span style="background-color: #fedcba;"> **-> 3 points si cette partie fonctionne**</span>
+
+4. Maintenant, un clic combiné avec touche ``Shift``  ajoute un prédateur qui erre dans l'environnement. 
+  Il émet une phéromone de danger et les fourmis cherchent à l'éviter tout en poursuivant leurs tâches si possible...
+
+[x] <span style="background-color: #fedcba;"> **-> 3 points si cette partie fonctionne**</span>
+
+
 ---
 
 En plus des dangers, ajouter des obstacles. 
  - Une case de type obstacle ne laisse passer aucune odeur de nid, de nourriture, de danger, de phéromones..
  - Un clic souris + un appui sur les touches ``Control`` et ``Shift`` permet d'ajouter des obstacles.
  - Vous créerez une ligne d'obstacles initiale comme dans la figure ci-dessous...
+ 
+[x] <span style="background-color: #fedcba;"> **-> 2 points si cette partie fonctionne**</span>
 
 
 <center>
@@ -115,14 +131,18 @@ Initialement, 50 fourmis sont lancées, 5 zones de nourritures sont posées ; 5 
   - Pour chaque 10 points de nourritures rentrés au nid, 1 nouvelle fourmi est créée.
   - La nourriture disparait de 1 point à chaque top. 
 - Fourmi
-- Prédateur
   - S'il n'y plus de nourriture au nid, 1 fourmi meurt à chaque top
+- Prédateur
   - Un nouveau prédateur possède 100 points de nourriture
-  - Un  prédateur mange la fourmi sur sa case; ce qui lui rapporte 10 points de nourritures
+  - Un prédateur mange la fourmi sur sa case ; ce qui lui rapporte 10 points de nourritures
   - Si un prédateur a 120 points de nourriture, il crée un nouveau prédateur et partage sa nourriture avec lui.
   - Un prédateur perd 1 point de nourriture à chaque top, il meurt lorsqu'il n'a plus de nourriture
 - Zone de nourriture
   - Une zone de nourriture met 50 étapes à se reconstituer
+
+[x] <span style="background-color: #fedcba;"> **-> 5 points si cette partie fonctionne totalement**</span>
+
+**N.B.** *note bornée à 20/20*
 
 > Ceci est le principe du modèle proie-prédateur. Il est utilisé pour mesurer, évaluer l'équilibre entre des populations d'animaux...
 > - Trop de consommateurs assèchent l'environnement, entraînent l'arrivée de nouveaux prédateurs. Les consommateurs meurent ensuite de faim et de chasse, et donc leurs prédateurs sans proies meurent également ; l'environnement se reconstitute ensuite sans présence d'être vivants.
