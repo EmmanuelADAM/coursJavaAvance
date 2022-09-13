@@ -61,3 +61,17 @@ Dans la classe Calcul,
   - Yp est le tableau des valeurs Y prédites (calculées)
   - On crée un tableau YpSeuil qui contient les valeurs de Yp ramenés au plus proche entier (0 ou 1)
   - On somme les différences entre Yi et YpSeuil et on en retourne la moyenne
+
+
+____________
+
+**Etape 3 : La régression logistique**
+Reste à coder le noyau du système : la classe proposant et modifiant les coefficients $\theta$.
+
+Coder les 2 fonctions manquantes : predict et fit dans la classe LogisticRegression
+
+____________
+
+**Etape 4 : Test**
+- Décommentez les lignes de la classe FenetreRegression
+- Vérifiez l'apprentissage
