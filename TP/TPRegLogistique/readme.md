@@ -30,3 +30,6 @@ ____________
 
 Complétez la classe Data fournie. (complétez les "ToDo")
 Contient des codes répondant à quelques points de programmation sur les TP :
+
+**Testez l'application !**
+Lancez le main de la classe FenetreRegression. Les points doivent apparaître, colorées selon leurs classes.
