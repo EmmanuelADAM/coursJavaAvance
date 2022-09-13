@@ -33,3 +33,30 @@ Contient des codes répondant à quelques points de programmation sur les TP :
 
 **Testez l'application !**
 Lancez le main de la classe FenetreRegression. Les points doivent apparaître, colorées selon leurs classes.
+
+____________
+
+**Etape 2 : Les calculs**
+
+Ici, la classification est binaire (0 ou 1), la prédiction doit donc tenir sur $[0,1]$.
+
+On utilisera alors une fonction sigmoïde pour cadrer les valeurs $\theta_0 + \theta_1.x_1 + \theta_2.x2$ dans cet 
+intervalle.
+
+Dans la classe Calcul, 
+- **compléter le code de la fonction retournant la sigmoïde** : 
+  - $f(x) = \frac{1}{1+e^{-x}}$
+    - Math.exp(x) retourne $e^x$
+
+- **compléter le code de la fonction retournant l'erreur moyenne** : 
+  - on utilise la formule de la "Binary cross entropy" : 
+    - $  \frac{1}{n}\sum_{j=0}^{n-1}(Yi_j*log(Yp_j) + (1-Yi_j)*log(1-Yp_j))$
+      - Yi est le tableau des valeurs y idéales
+      - Yp est le tableau des valeurs Y prédites (calculées)
+    - on somme l'ensemble des erreurs et on en retourne $-erreurs/n$
+
+- **compléter le code de la fonction retournant la précision** :
+  - Yi est le tableau des valeurs y idéales
+  - Yp est le tableau des valeurs Y prédites (calculées)
+  - On crée un tableau YpSeuil qui contient les valeurs de Yp ramenés au plus proche entier (0 ou 1)
+  - On somme les différences entre Yi et YpSeuil et on en retourne la moyenne
