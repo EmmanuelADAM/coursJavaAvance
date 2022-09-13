@@ -57,8 +57,8 @@ public class LogisticRegression {
         for (int s = 0; s < nbSteps; s++) {
             //on corrige les thetas :
             //thetas[0] = thetas[0] + alpha * dif;
-            //thetas[1] = thetas[1] + alpha * dif * X[0][j];
-            //thetas[2] = thetas[2] + alpha * dif * X[1][j];
+            //thetas[1] = thetas[1] + alpha * dif * X[j][0];
+            //thetas[2] = thetas[2] + alpha * dif * X[j][1];
             // ........etc pour avoir un code adaptable à différentes dimensions de données (bonus)
             }
         }
