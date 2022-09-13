@@ -53,6 +53,7 @@ Dans la classe Calcul,
     - $\frac{1}{n}{\sum_{j=0}}^{n-1}(Yi_j*log(Yp_j) + (1-Yi_j)*log(1-Yp_j))$
       - Yi est le tableau des valeurs y idéales
       - Yp est le tableau des valeurs Y prédites (calculées)
+      - Math.log(x) retourne $log(x)$
     - on somme l'ensemble des erreurs et on en retourne $-erreurs/n$
 
 - **compléter le code de la fonction retournant la précision** :
