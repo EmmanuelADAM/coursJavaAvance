@@ -24,4 +24,6 @@ Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique
 ## [TP](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP) 
 * Contient des codes répondant à quelques points de programmation pour les TP
   * [Exemple de grille](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/ExempleJeu) : un exemple simple de création d'une grille de jeu interactive
- * [Le compte est bon](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/CompteEstBon/) : exemple de résolution du problème par Java
+* [Le compte est bon](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/CompteEstBon/) : exemple de résolution du problème par Java
+* [Régression logistique](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/TPRegLogistique/) : 
+  coder l'algorithme d'apprentissage par régression logistique en Java
