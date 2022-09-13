@@ -12,6 +12,7 @@ class ClientTCP  {
    {
         // récupère l'adresse internet du host
         // null permet de tester les applis sur une machine unique
+        // (selon l'environnement, il peut etre necessaire de remplacer null par l'adresse du serveur meme en local (ex. "192.168.0.26"))
         InetAddress addr = InetAddress.getByName(null);
       //la syntaxe try-with suivante va clore tout ce qui a été ouvert en sortie de bloc
         try (

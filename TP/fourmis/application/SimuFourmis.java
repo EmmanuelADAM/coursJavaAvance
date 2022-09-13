@@ -95,6 +95,7 @@ import modele.Environnement;
             case "f"->addFourmi();
             case "d"->chrono.play();
             case "p"->chrono.stop();
+                //TODO: Ajouter comme choix "+" qui accélère la simulation et "-" qui la ralentit
             default->System.out.println("touche percue = " + touche);
         }
     }
