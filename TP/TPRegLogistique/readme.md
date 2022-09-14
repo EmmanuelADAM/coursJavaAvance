@@ -59,8 +59,8 @@ Dans la classe Calcul,
 - **compléter le code de la fonction retournant la précision** :
   - Yi est le tableau des valeurs y idéales
   - Yp est le tableau des valeurs Y prédites (calculées)
-  - On crée un tableau YpSeuil qui contient les valeurs de Yp ramenés au plus proche entier (0 ou 1)
-  - On somme les différences entre Yi et YpSeuil et on en retourne la moyenne
+  - On crée un tableau YpSeuil qui contient les valeurs de Yp ramenées aux plus proches entiers (0 ou 1)
+  - On somme les égalités entre Yi et YpSeuil et on en retourne la moyenne
 
 
 ____________
