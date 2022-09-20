@@ -39,10 +39,12 @@ Ici dans le TP, on cherche à apprendre à reproduire le classement suivant :
 
 Dans la classe **Data**, vous trouverez le tableau correspondant : 
 
-<code>
+<pre>
 static double[][]data = {
 {1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-{1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},...</code>
+{1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},...
+[----------------Xs----------------------][Yi]
+</pre>
 
 L'algo doit donc apprendre à répondre '1' lorsqu'on lui présente l'***exemple*** <code>{1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 
 0, 0,
@@ -53,19 +55,27 @@ Un réseau de neurones mono-couche et à une seule sortie contient n neurones d'en
 
 Chaque neurone d'entrée transmet le signal au neurone de sortie.
 Il y a autant de neurones d'entrées que de valeurs composant un exemple à apprendre plus 1 (donc 15 ici); 
-en effet, l'ajout d'un neurone spécifique générant la valeur 1 est nécessaire pour un bon apprentissage.
+*(en effet, l'ajout d'un neurone spécifique générant la valeur 1 est nécessaire pour un bon apprentissage)*.
 
-Le neurone de sortie reçoit donc des valeurs de chaque entrée $e_i$, leur applique un poids $w_i$, et réalise une 
-somme pondérée : 
+#### Apprendre sur un exemple
+Pour un exemple $e$, le neurone de sortie reçoit donc chaque valeur $e_i$, applique un poids 
+$w_i$,  et réalise  une somme pondérée : 
   - $s = \omega_0.e_0 + \omega_1.e_1 + \omega_2.e_2 + \dots + \omega_n.e_n$
 
 Pour contenir cette somme sur $[0,1]$, on applique une fonction sigmoïde : 
   - $y_p = f(s) = \frac{1}{1+e^{-s}}$
 
-Puis l'algo mesure son erreur (dif, différence entre le $y_i$ y idéal et le $y_p$ y prédit) modifie les coefficients 
-omegas à partir de cette différence.
+Puis l'algo mesure son erreur ($dif = yi-yp$, différence entre le  y idéal et le  y prédit) et modifie les 
+coefficients  omegas à partir de cette formule :
+    - $\omega_i = \omega_i + \alpha \times dif \times e_i$
 
-Le cycle calcul-correction se poursuit « un certain temps ».
+
+#### Réitérer le cycle d'apprentissage
+
+Il s'agit de répéter l'"apprentissage" ci-dessus sur l'ensemble des exemples.
+
+Et de recommencer des cycles d'apprentissage complet jusqu'à « un certain temps » (un nb de cycles prédéfini) ou 
+jusqu'à l'obtention d'un degré d'erreur satisfaisant.
 
 
 Le TP se compose de plusieurs classes et de plusieurs étapes.

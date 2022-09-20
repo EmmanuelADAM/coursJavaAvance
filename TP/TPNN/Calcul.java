@@ -33,7 +33,7 @@ public class Calcul {
 
 
     /**
-     calcul la précision moyenne des valeurs prédites yp par rapport aux valeurs
+     calcule la précision moyenne des valeurs prédites yp par rapport aux valeurs
      @param yi valeurs attendues (ideales)
      @param yp valeurs predites
      @param seuil valeur à partir de laquelle une valeur yp est consideree comme 0 ou 1
