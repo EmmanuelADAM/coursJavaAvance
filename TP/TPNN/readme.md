@@ -65,9 +65,13 @@ $w_i$,  et réalise  une somme pondérée :
 Pour contenir cette somme sur $[0,1]$, on applique une fonction sigmoïde : 
   - $y_p = f(s) = \frac{1}{1+e^{-s}}$
 
-Puis l'algo mesure son erreur ($dif = yi-yp$, différence entre le  y idéal et le  y prédit) et modifie les 
+Puis l'algo mesure son erreur ( $dif = yi-yp$ , différence entre le  y idéal et le  y prédit) et modifie les 
 coefficients  omegas à partir de cette formule :
-    - $\omega_i = \omega_i + \alpha \times dif \times e_i$
+- $\omega_i = \omega_i + \alpha \times dif \times e_i$
+    - où $\alpha$ est un coefficient réducteur dans $[0,1]$.
+il peut être fixe (généralement $=0.1$ ) ou évoluer dans le temps.
+
+
 
 
 #### Réitérer le cycle d'apprentissage
