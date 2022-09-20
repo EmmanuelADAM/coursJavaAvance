@@ -1,24 +1,24 @@
-# Supports de TP Java Réseau de Neurones
+# Supports de TP Java RÃ©seau de Neurones
 
-Le but de ce TP est de programmer un réseau de neurones mono-couche capable d'apprendre à classer des données en 
-deux catégories.
+Le but de ce TP est de programmer un rÃ©seau de neurones mono-couche capable d'apprendre Ã  classer des donnÃ©es en 
+deux catÃ©gories.
 
-C'est le premier type de réseau inventé dans les années 60; dans les années 70s/80s sont apparus les réseaux 
-multicouches utilisés actuellement.
+C'est le premier type de rÃ©seau inventÃ© dans les annÃ©es 60; dans les annÃ©es 70s/80s sont apparus les rÃ©seaux 
+multicouches utilisÃ©s actuellement.
 
 ## Classification de textes
 
 ### sacs de mots
-Lorsqu'on souhaite apprendre à des textes sur deux catégories (spam/non-spam, par exemple); on épure ces textes en 
-ôtant les mots de liaison et mots peu utilisés.
+Lorsqu'on souhaite apprendre Ã  des textes sur deux catÃ©gories (spam/non-spam, par exemple); on Ã©pure ces textes en 
+Ã´tant les mots de liaison et mots peu utilisÃ©s.
 
 Il reste donc des ensembles de mots pour chaque texte. 
-- Pour encoder ces textes, on regarde le nombre de mots différents utilisés par l'ensemble des textes et on crée un 
-tableau où ne colonne correspond à un mot.
-- Ainsi pour le texte i, on mettra 1 en colonne j si le mot n° j du tableau apparaît dans le texte.
-  - c'est la conversion en « sacs de mots »
+- Pour encoder ces textes, on regarde le nombre de mots diffÃ©rents utilisÃ©s par l'ensemble des textes et on crÃ©e un 
+tableau oÃ¹ ne colonne correspond Ã  un mot.
+- Ainsi pour le texte i, on mettra 1 en colonne j si le mot nÂ° j du tableau apparaÃ®t dans le texte.
+  - c'est la conversion en Â« sacs de mots Â»
 
-Ici dans le TP, on cherche à apprendre à reproduire le classement suivant : 
+Ici dans le TP, on cherche Ã  apprendre Ã  reproduire le classement suivant : 
  - 'bombe', 'feu' => danger
  - 'bombe', 'peinture' => _
  - 'bombe', 'pistolet' => danger
@@ -34,8 +34,8 @@ Ici dans le TP, on cherche à apprendre à reproduire le classement suivant :
  - 'descendre', 'bierre' => _
  - 'descendre', 'escalier' => _
 
-  - Un texte contenant les mots 'tete' & 'balle' (en non les autres) est considéré comme suspect; un texte contenant 
-    bombe et  'peinture' (en non les autres) est considéré comme non suspect.
+  - Un texte contenant les mots 'tete' & 'balle' (en non les autres) est considÃ©rÃ© comme suspect; un texte contenant 
+    bombe et  'peinture' (en non les autres) est considÃ©rÃ© comme non suspect.
 
 Dans la classe **Data**, vous trouverez le tableau correspondant : 
 
@@ -46,51 +46,51 @@ static double[][]data = {
 [----------------Xs----------------------][Yi]
 </pre>
 
-L'algo doit donc apprendre à répondre '1' lorsqu'on lui présente l'***exemple*** <code>{1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 
+L'algo doit donc apprendre Ã  rÃ©pondre '1' lorsqu'on lui prÃ©sente l'***exemple*** <code>{1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 
 0, 0,
 0, 0}</code>, ...
 
-### Réseau mono-couche
-Un réseau de neurones mono-couche et à une seule sortie contient n neurones d'entrées et 1 neurone de sortie.
+### RÃ©seau mono-couche
+Un rÃ©seau de neurones mono-couche et Ã  une seule sortie contient n neurones d'entrÃ©es et 1 neurone de sortie.
 
-Chaque neurone d'entrée transmet le signal au neurone de sortie.
-Il y a autant de neurones d'entrées que de valeurs composant un exemple à apprendre plus 1 (donc 15 ici); 
-*(en effet, l'ajout d'un neurone spécifique générant la valeur 1 est nécessaire pour un bon apprentissage)*.
+Chaque neurone d'entrÃ©e transmet le signal au neurone de sortie.
+Il y a autant de neurones d'entrÃ©es que de valeurs composant un exemple Ã  apprendre plus 1 (donc 15 ici); 
+*(en effet, l'ajout d'un neurone spÃ©cifique gÃ©nÃ©rant la valeur 1 est nÃ©cessaire pour un bon apprentissage)*.
 
 #### Apprendre sur un exemple
-Pour un exemple $e$, le neurone de sortie reçoit donc chaque valeur $e_i$, applique un poids 
-$w_i$,  et réalise  une somme pondérée : 
+Pour un exemple $e$, le neurone de sortie reÃ§oit donc chaque valeur $e_i$, applique un poids 
+$w_i$,  et rÃ©alise  une somme pondÃ©rÃ©e : 
   - $s = \omega_0.e_0 + \omega_1.e_1 + \omega_2.e_2 + \dots + \omega_n.e_n$
 
-Pour contenir cette somme sur $[0,1]$, on applique une fonction sigmoïde : 
+Pour contenir cette somme sur $[0,1]$, on applique une fonction sigmoÃ¯de : 
   - $y_p = f(s) = \frac{1}{1+e^{-s}}$
 
-Puis l'algo mesure son erreur ( $dif = yi-yp$ , différence entre le  y idéal et le  y prédit) et modifie les 
-coefficients  omegas à partir de cette formule :
+Puis l'algo mesure son erreur ( $dif = yi-yp$ , diffÃ©rence entre le  y idÃ©al et le  y prÃ©dit) et modifie les 
+coefficients  omegas Ã  partir de cette formule :
 - $\omega_i = \omega_i + \alpha \times dif \times e_i$
-    - où $\alpha$ est un coefficient réducteur dans $[0,1]$.
-il peut être fixe (généralement $=0.1$ ) ou évoluer dans le temps.
+    - oÃ¹ $\alpha$ est un coefficient rÃ©ducteur dans $[0,1]$.
+il peut Ãªtre fixe (gÃ©nÃ©ralement $=0.1$ ) ou Ã©voluer dans le temps.
 
 
 
 
-#### Réitérer le cycle d'apprentissage
+#### RÃ©itÃ©rer le cycle d'apprentissage
 
-Il s'agit de répéter l'"apprentissage" ci-dessus sur l'ensemble des exemples.
+Il s'agit de rÃ©pÃ©ter l'"apprentissage" ci-dessus sur l'ensemble des exemples.
 
-Et de recommencer des cycles d'apprentissage complet jusqu'à « un certain temps » (un nb de cycles prédéfini) ou 
-jusqu'à l'obtention d'un degré d'erreur satisfaisant.
+Et de recommencer des cycles d'apprentissage complet jusqu'Ã  Â« un certain temps Â» (un nb de cycles prÃ©dÃ©fini) ou 
+jusqu'Ã  l'obtention d'un degrÃ© d'erreur satisfaisant.
 
 
-Le TP se compose de plusieurs classes et de plusieurs étapes.
+Le TP se compose de plusieurs classes et de plusieurs Ã©tapes.
 
 
 
 ____________
 
-**Etape 1 : Les données**
+**Etape 1 : Les donnÃ©es**
 
-Complétez la classe GestionData fournie. (complétez les "ToDo")
+ComplÃ©tez la classe GestionData fournie. (complÃ©tez les "ToDo")
 
  **Testez l'application !**
 Lancez le main de la classe Perceptron1. 
@@ -101,41 +101,40 @@ ____________
 **Etape 2 : Les calculs**
 
 Dans la classe Calcul,
-- **compléter le code de la fonction retournant la sigmoïde** :
+- **complÃ©ter le code de la fonction retournant la sigmoÃ¯de** :
     - $f(x) = \frac{1}{1+e^{-x}}$
         - Math.exp(x) retourne $e^x$
 
-- **compléter le code de la fonction retournant l'erreur moyenne** :
+- **complÃ©ter le code de la fonction retournant l'erreur moyenne** :
     - on utilise la formule de la "Binary cross entropy" :
         - $-\frac{1}{n}{\sum_{j=0}}^{n-1}(Yi_j*log(Yp_j) + (1-Yi_j)*log(1-Yp_j))$
-            - Yi est le tableau des valeurs y idéales
-            - Yp est le tableau des valeurs Y prédites (calculées)
+            - Yi est le tableau des valeurs y idÃ©ales
+            - Yp est le tableau des valeurs Y prÃ©dites (calculÃ©es)
             - Math.log(x) retourne $log(x)$
         - on somme donc l'ensemble des "erreurs" et on en retourne $-erreurs/n$
 
 
 ____________
 
-**Etape 3 : L'apprentissage par réseaux de neurones**
-Reste à coder le noyau du système : la classe proposant et modifiant les coefficients $\omega$.
+**Etape 3 : L'apprentissage par rÃ©seaux de neurones**
+Reste Ã  coder le noyau du systÃ¨me : la classe proposant et modifiant les coefficients $\omega$.
 
 Coder les 3 fonctions manquantes : feedForward, computeOutputAndErrors et train dans la classe Perceptron1
 
 ____________
 
 **Etape 4 : Test**
-- Décommentez les dernières lignes de la classe Perceptron1
-- Vérifiez l'apprentissage
+- DÃ©commentez les derniÃ¨res lignes de la classe Perceptron1
+- VÃ©rifiez l'apprentissage
 
 ____________
 
-**Etape 5 : Amélioration**
-L'apprentissage ci-dessus doit présenter des résultats presque parfaits 
+**Etape 5 : AmÃ©lioration**
+L'apprentissage ci-dessus doit prÃ©senter des rÃ©sultats presque parfaits 
 
-- Cependant, si on remarque que la sortie : 
+- Cependant, on remarque que la sortie : 
   - l'exemple contient bombe, feu, attaquant, Sport, bierre,
-  - il y a 0,00 % de chance  que cet exemple soit un danger
-
-  - est problématique.
-  - Ce n'est pas une erreur du réseau, juste des entrées. Il faut ajouter cet exemple dans le dataset et relancer 
+  - il y a 0,00 % de chances que cet exemple soit un danger
+- est problÃ©matique.
+  - Ce n'est pas une erreur du rÃ©seau, juste des entrÃ©es. Il faut ajouter cet exemple dans le dataset et relancer 
     l'apprentissage.
