@@ -27,3 +27,7 @@ Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique
 * [Le compte est bon](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/CompteEstBon/) : exemple de résolution du problème par Java
 * [Régression logistique](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/TPRegLogistique/) : 
   coder l'algorithme d'apprentissage par régression logistique en Java
+* [Reseau de neurones](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/TPNN) :
+  coder l'algorithme d'apprentissage par réseau de neurones monocouche en Java
+
+
