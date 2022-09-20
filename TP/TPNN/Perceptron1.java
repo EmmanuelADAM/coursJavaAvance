@@ -67,6 +67,15 @@ import java.util.stream.IntStream;
 
         //TODO: faire la suite...
 
+        System.out.println("_".repeat(40));
+        System.out.println("----  fin de l'entrainement ---- ");
+
+        var precision = Calcul.binaryAccuracy(sortieIdeale, sortieCalculee, 0.5);
+        System.out.println("precision de l'apprentissage : " + precision);
+
+        var entropie = Calcul.binaryCrossEntropy(sortieIdeale, sortieCalculee);
+        System.out.println("erreur moyenne de l'apprentissage : " + entropie);
+
         return sortieCalculee;
 	}
 
