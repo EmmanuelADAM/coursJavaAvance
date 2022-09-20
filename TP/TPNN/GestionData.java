@@ -49,4 +49,11 @@ public class GestionData {
         return sb.toString();
     }
 
+    /**retourne un vecteur exemple a partir des mots passe en parametre*/
+    public double[] motsExemple(MotsCles ...mots){
+        double[]exemple = new double[nbValeurs];
+        exemple[0] = 1;
+        for(MotsCles mot:mots) exemple[mot.ordinal()+1] = 1;
+        return exemple;
+    }
 }

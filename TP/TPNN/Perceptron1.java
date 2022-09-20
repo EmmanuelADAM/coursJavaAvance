@@ -75,6 +75,7 @@ import java.util.stream.IntStream;
 
         var entropie = Calcul.binaryCrossEntropy(sortieIdeale, sortieCalculee);
         System.out.println("erreur moyenne de l'apprentissage : " + entropie);
+        System.out.println("_".repeat(40));
 
         return sortieCalculee;
 	}
@@ -113,11 +114,35 @@ import java.util.stream.IntStream;
 //        Perceptron1 p1 = new Perceptron1(gd.nbValeurs);
 //        p1.train(gd);
 //
+
+
 //        double[]essaiDePrediction = {1, 0,	1,	0,	0,	1,	0,	0,	0,	0,	1,	0,	0,	0,	0};
 //        var r = p1.feedForward(essaiDePrediction);
 //        System.out.println(gd.toStringExemple(essaiDePrediction));
-//        System.out.printf("il y a %.2f %% de chance  que cet exemple soit un danger", (r*100));
-
-
+//        System.out.printf("il y a %.2f %% de chance  que cet exemple soit un danger%n", (r*100));
+//
+//        essaiDePrediction = new double[]{1, 0, 0,	0,	0,	0,	1,	0,	0,	0,	0,	1,	0,	0,	0};
+//        r = p1.feedForward(essaiDePrediction);
+//        System.out.println(gd.toStringExemple(essaiDePrediction));
+//        System.out.printf("il y a %.2f %% de chance  que cet exemple soit un danger%n", (r*100));
+//
+//        essaiDePrediction = gd.motsExemple(MotsCles.attaquant, MotsCles.bombe, MotsCles.bierre, MotsCles.feu,
+//                MotsCles.Sport);
+//        r = p1.feedForward(essaiDePrediction);
+//        System.out.println(gd.toStringExemple(essaiDePrediction));
+//        System.out.printf("il y a %.2f %% de chance  que cet exemple soit un danger%n", (r*100));
+//
+//        essaiDePrediction = gd.motsExemple(MotsCles.attaquant, MotsCles.roses, MotsCles.bierre,
+//                MotsCles.Sport);
+//        r = p1.feedForward(essaiDePrediction);
+//        System.out.println(gd.toStringExemple(essaiDePrediction));
+//        System.out.printf("il y a %.2f %% de chance  que cet exemple soit un danger%n", (r*100));
+//
+//
+//        essaiDePrediction = gd.motsExemple(MotsCles.descendre, MotsCles.bierre, MotsCles.bierre,
+//                MotsCles.Sport);
+//        r = p1.feedForward(essaiDePrediction);
+//        System.out.println(gd.toStringExemple(essaiDePrediction));
+//        System.out.printf("il y a %.2f %% de chance  que cet exemple soit un danger%n", (r*100));
 	}
 }

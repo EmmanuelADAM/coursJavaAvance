@@ -126,3 +126,16 @@ ____________
 **Etape 4 : Test**
 - Décommentez les dernières lignes de la classe Perceptron1
 - Vérifiez l'apprentissage
+
+____________
+
+**Etape 5 : Amélioration**
+L'apprentissage ci-dessus doit présenter des résultats presque parfaits 
+
+- Cependant, si on remarque que la sortie : 
+  - l'exemple contient bombe, feu, attaquant, Sport, bierre,
+  - il y a 0,00 % de chance  que cet exemple soit un danger
+
+  - est problématique.
+  - Ce n'est pas une erreur du réseau, juste des entrées. Il faut ajouter cet exemple dans le dataset et relancer 
+    l'apprentissage.
