@@ -119,10 +119,10 @@ ____________
 **Etape 3 : L'apprentissage par réseaux de neurones**
 Reste à coder le noyau du système : la classe proposant et modifiant les coefficients $\omega$.
 
-Coder les 3 fonctions manquantes : feedForward, computeOutputAndErrors et train dans la classe LogisticRegression
+Coder les 3 fonctions manquantes : feedForward, computeOutputAndErrors et train dans la classe Perceptron1
 
 ____________
 
 **Etape 4 : Test**
-- Décommentez les lignes de la classe FenetreRegression
+- Décommentez les dernières lignes de la classe Perceptron1
 - Vérifiez l'apprentissage
