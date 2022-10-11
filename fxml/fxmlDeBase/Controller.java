@@ -19,7 +19,7 @@ public class Controller {
     /**fonction accessible par scene buidler et FXML*/
     @FXML public  void setText(ActionEvent e){
         text=tf.getText();
-        System.out.println("texte recupéré = " + text);
+        System.out.println("texte récupéré = " + text);
     }
 
     public String getText(){return text;}

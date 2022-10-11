@@ -1,3 +1,5 @@
+package processus;
+
 import java.math.BigInteger;
 
 /**
@@ -6,13 +8,22 @@ import java.math.BigInteger;
  * */
 public class TestLambdaRun {
 
+
+	public static void boucles(int a, int b){
+		for(int i=a; i<b; i++){
+			System.err.println(Thread.currentThread().getName() + "->" + i);
+			Thread.yield();
+		}
+	}
+
 	public static void testPetitsRuns()
 	{
 		ThreadGroup groupe = new ThreadGroup("mon groupe");
-		Thread p1 = new Thread(groupe, ()->{int j=0; for(int i=0; i<5; i++){j=i; System.err.println("p1->" + j);Thread.yield();}});
-		Thread p2 = new Thread(groupe, ()->{for(int i=100; i<105; i++){System.err.println("p2->" + i);Thread.yield();}});
-		Thread p3 = new Thread(groupe, ()->{for(int i=200; i<205; i++){System.err.println("p3->" + i);Thread.yield();}});
-		p1.start(); p2.start(); p3.start(); 
+
+		new Thread(groupe, ()->boucles(100, 105), "p1").start();
+		new Thread(groupe, ()->boucles(200, 205), "p2").start();
+		new Thread(groupe, ()->boucles(300, 305), "p3").start();
+//		p1.start(); p2.start(); p3.start();
 		while(groupe.activeCount()!=0 ) Thread.yield();
 		System.err.println("Ils ont fini !!!");
 	}
@@ -23,8 +34,8 @@ public class TestLambdaRun {
 	/**@return un big integer correspondant à start0 x start1 x .... x end*/
 	static BigInteger factBI(int start, int end)
 	{
-		BigInteger res= BigInteger.ONE;
-		BigInteger bi= BigInteger.valueOf(start);
+		BigInteger res = BigInteger.ONE;
+		BigInteger bi  = BigInteger.valueOf(start);
 		int i=start;
 		while(i<=end)
 		{
@@ -36,7 +47,7 @@ public class TestLambdaRun {
 		return res;
 	}
 	
-	/**calcul de la combinatoire (combien de groupes différent de p éléments parmi n))<br>
+	/**calcul de la combinatoire (combien de groupes différents de p éléments parmi n))<br>
 	 * utilise 2 processus places dans un groupe et effectue le calcul final à la fin de ceux-ci*/
 	static void cnpBIQuick(int n, int p)
 	{
@@ -47,6 +58,7 @@ public class TestLambdaRun {
 		final int petit = bas;
 		final int grand = haut;
 		ThreadGroup grp = new ThreadGroup("combi");
+
 		Thread dessous = new Thread(grp, ()->combi[0]=factBI(1,petit));
 		Thread dessus  = new Thread(grp, ()->combi[1]=factBI((grand+1),n));
 		dessous.start(); dessus.start();
@@ -62,7 +74,7 @@ public class TestLambdaRun {
 	
 	public static void main(String ...args)
 	{
-		testPetitsRuns();
+//		testPetitsRuns();
 		cnpBIQuick(10000, 30);
 	}
 

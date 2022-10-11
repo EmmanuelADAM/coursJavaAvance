@@ -1,4 +1,4 @@
-package dinerPhilosophes;
+package processus.dinerPhilosophes;
 import java.util.Arrays;
 
 /** liste des Fourchettes que doivent se partager les philosophes

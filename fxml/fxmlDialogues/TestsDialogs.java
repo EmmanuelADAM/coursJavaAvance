@@ -62,7 +62,7 @@ public class TestsDialogs {
         tid.setHeaderText("saisissez qq chose...");
         tid.setContentText("votre texte : ");
         Optional<String> rep =  tid.showAndWait();
-        rep.ifPresent(r->System.out.println("vous avez saisi : " + r.toString()));
+        rep.ifPresent(r->System.out.println("vous avez saisi : " + r));
     }
 
     /**fenetre de saisie de choix */
@@ -73,7 +73,7 @@ public class TestsDialogs {
         cd.setHeaderText("choisissez votre langage prefere : ");
         cd.setContentText("langage : ");
         Optional<String> rep =  cd.showAndWait();
-        rep.ifPresent(r->System.out.println("vous avez saisi : " + r.toString()));
+        rep.ifPresent(r->System.out.println("vous avez saisi : " + r));
     }
 
     /**lancement des differentes fenetres*/

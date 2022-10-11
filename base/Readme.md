@@ -10,7 +10,7 @@
   -- memoire utilisee =  0 o
   somme de 0 à 60000 = 1799970000
   -- tps de calcul en utilisant les objets =  8.709526 ms
-  -- memoire utilisee =  94113 o
+  -- memoire utilisee =  94113 o 
 - fonction qui compare les couts en tps de l'utilisation de String, StringBuilder et StringBuffer
   - exemple de sortie : 
   ```
@@ -58,6 +58,6 @@
   - exemple de sortie :
   ```
   tabA=[2, 5, 4, 3, 1, 7, 8]
-  tabB=[5, 4, 8, 2]
+  tabB=[5, 4, 8, 2] 
   tabC=tabAxTabB =[10.0, 20.0, 32.0, 6.0, 0.0, 0.0, 0.0, 0.0]
   tabC=tabA/TabB =[0.4, 1.25, 0.5, 1.5, 0.0, 0.0, 0.0, 0.0]

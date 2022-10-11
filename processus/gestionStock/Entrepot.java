@@ -7,7 +7,7 @@ import java.util.Arrays;
  * */
 class Entrepot {
 
-	/**tableau ou sont stockes des entiers*/
+	/**tableau où sont stockés des entiers*/
 	private final int[] stockage;
 
 	/**taille de l'entrepot*/
@@ -29,14 +29,14 @@ class Entrepot {
 	/**fonction synchronise de depot d'objet (entier)*/
 	public synchronized void depose(int obj) {
 		// tq que le tableau est plein, mettre en pause
-		while (nbObjetsCourants == (taille - 1)) {
+		while (nbObjetsCourants >= taille) {
 			// affiche le nom du processus appelant et mis en pause
 			System.out.println(Thread.currentThread().getName() + "-- est mis en pause dans le depot d'objet");
 			try { wait(); } catch (InterruptedException e) { }
 			System.out.println(Thread.currentThread().getName() + "-- reprend la tentative de depot d'objet");
 		}
-		stockage[nbObjetsCourants] = obj;
 		nbObjetsCourants++;
+		stockage[nbObjetsCourants-1] = obj;
 		nbDeposes++;
 		//reveiller des autres processus au cas ou
 		notifyAll();

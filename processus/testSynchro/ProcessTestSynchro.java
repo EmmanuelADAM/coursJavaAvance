@@ -1,4 +1,4 @@
-package testSynchro;
+package processus.testSynchro;
 
 import java.time.LocalTime;
 

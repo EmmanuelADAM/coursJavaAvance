@@ -9,14 +9,30 @@ Voici l'énoncé :
 - Il y a donc un porbklème de partage de ressources (les fourchettes).
 
 La disposition est la suivante :
-  ```
-              Philo0   
-         F0            F1
-   Philo4                 Philo1
-         F4              F2
-      Philo3           Philo2
-                F3
-  ```
+
+
+<!-- note, pour plantUml, ci-dessous retirer les espaces entre deux tirets -- et le signe > 
+```
+@startuml dinerPhilosophes
+hide empty description
+P0 -> (F0)
+(F0) <- P1
+P1 -> (F1)
+(F1) <- P2
+P2 -> (F2)
+P3-> (F2)
+(F3) <- P3
+P4 -> (F3) 
+(F4) <- P4
+(F4) <-- P0
+
+@enduml
+```
+
+-->
+
+<img src="dinerPhilosophes.png" alt="reseau v2" height="200"/>
+
 ----
 ## Philosophe
 Un **Philosophe** possède un identifiant entier, un lien vers les fourchettes, un nombre de bouchées à ingurgiter, un temps minimum pour avaler une bouchée, un temps variable pour mastiquer, un temps minimum pour réfléchir, un temps variable pour divaguer.

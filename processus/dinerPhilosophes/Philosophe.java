@@ -1,4 +1,4 @@
-package dinerPhilosophes;
+package processus.dinerPhilosophes;
 
 /**
  * classe representant un Philosophe dans le diner des Philosophes.<br>

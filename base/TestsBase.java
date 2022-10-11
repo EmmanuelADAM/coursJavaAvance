@@ -85,7 +85,7 @@ public class TestsBase {
         int taille = 100000000;
         int[] tab = new int [taille];
         Random hasard = new Random();
-        //affecte a chaque case d'indice i un nb entre 0 et taille
+        //affecte à chaque case d'indice i un nb entre 0 et taille
         Arrays.setAll(tab, i->hasard.nextInt(taille));
         //affiche les 10 premiers
         for(int i=0; i<10; i++) out.print(tab[i] + ", ");

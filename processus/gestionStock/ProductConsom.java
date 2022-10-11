@@ -5,14 +5,15 @@ class ProductConsom {
 		Entrepot tab = new Entrepot(20);
 		//creation et lancement des producteurs
 		ThreadGroup groupeProd = new ThreadGroup("producteurs");
-		new Producteur(groupeProd, "product1", tab).start();
-		new Producteur(groupeProd, "product2", tab).start();
+		int nbProducteurs = 4;
+		for(int i=0; i<nbProducteurs; i++)
+			new Producteur(groupeProd, "product"+i, tab).start();
 
 		//creation et lancement des consommateurs
-		ThreadGroup groupeCons = new ThreadGroup("consommateurs");
-		new Consommateur(groupeCons, "consom 1", tab).start();
-		new Consommateur(groupeCons, "consom 2", tab).start();
-		new Consommateur(groupeCons, "consom 3", tab).start();
+		ThreadGroup groupeConsom = new ThreadGroup("consommateurs");
+		int nbConsommateurs = 3;
+		for(int i=0; i<nbConsommateurs; i++)
+			new Consommateur(groupeConsom, "consom"+i, tab).start();
 
 		//on les laisse travailler 10 secondes
 		try { Thread.sleep(10000); }
@@ -25,8 +26,8 @@ class ProductConsom {
 		for(Producteur p:lesProds) p.halte();
 
 		//on recupere la liste des consommateurs a partir du groupe
-		Consommateur[] lesCons = new Consommateur[groupeCons.activeCount()];
-		groupeCons.enumerate(lesCons);
+		Consommateur[] lesCons = new Consommateur[groupeConsom.activeCount()];
+		groupeConsom.enumerate(lesCons);
 		//et on leur demande d'arreter
 		for(Consommateur c:lesCons) c.halte();
 

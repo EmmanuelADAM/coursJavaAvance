@@ -2,9 +2,10 @@
 
 Illustration du principe de synchronisation : 
 - Un entrepot peut contenir un nb limité d'entiers
-- Des processus protucteurs produisent des entiers et les stockent dans un entrepôt.
-- Des clients retirent des entiers de l'entrepot.
-- La classe principale est ProductConsom qui crée un entrepot, et crée des producteurs et consommateurs tous lies au meme entrepot.
+- Des processus producteurs produisent des entiers et les stockent dans un entrepôt.
+- Des clients retirent des entiers de l'entrepôt.
+- La classe principale est ProductConsom qui crée un entrepot, et crée des producteurs et consommateurs tous liés au 
+  meme entrepot.
 
 - Exemple de sortie : 
 ```

@@ -1,3 +1,5 @@
+package processus;
+
 import java.time.LocalTime;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -11,7 +13,8 @@ class MaTachePlanifiee extends TimerTask
 	String name;
 	MaTachePlanifiee(String name){this.name = name;}
 	public void run() {
-	    System.out.println(LocalTime.now().format(DateTimeFormatter.ofPattern("hh:mm:ss"))  + " -> Execution de tache " + name);   
+	    System.out.println(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"))  + " -> Execution de tache" +
+				" " + name);
 	}
 	
 }
@@ -29,7 +32,8 @@ public class TestTimerTask {
 		timer.schedule(new MaTachePlanifiee("t2"), 1000, 3000);
 		try { Thread.sleep(15000); } catch (InterruptedException e) {}
 		timer.cancel();
-	    System.out.println(LocalTime.now().format(DateTimeFormatter.ofPattern("hh:mm:ss")) + " -> FIN !!");   
+	    System.out.println(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")) + " -> FIN !!");
+//		System.exit(0);
 	}
 
 }
