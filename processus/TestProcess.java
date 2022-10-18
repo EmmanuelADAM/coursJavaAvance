@@ -1,6 +1,7 @@
+package processus;
 
 /**
- * classe qui es une simple tache qui calcule la somme de nb <br>
+ * classe qui est une simple tâche qui calcule la somme de nb <br>
  * le calcul peut être interrompu
  * @author emmanuel adam
  **/
@@ -31,9 +32,10 @@ class MaTacheCalcule extends Thread
 		{
 			somme= somme + i;
 			Thread.yield();	
-			}
-		if(!arret) System.out.println(getName() + " ::: J'ai reussi à finir !!!");
-		else System.out.println(getName() + " ::: J'ai été arrété, il me restait " + (taille-i) + " calculs à faire !" );
+		}
+		if(!arret) System.out.println(getName() + " ::: J'ai réussi à finir !!!");
+		else System.out.println(getName() + " ::: J'ai été arrêté, il me restait " + (taille-i) + " calculs à faire " +
+				"!" );
 	}
 }
 
@@ -53,10 +55,11 @@ public class TestProcess
 		System.out.println("Je suis la tâche principale");
 		try
 		{
-			Thread.sleep(300);
+			Thread.sleep(1000);
 		}
 		catch(Exception e){System.out.println("pb dans le sommeil " + e);}
-		System.out.println("Je suis la tâche principale et j'arrete les taches");
+		System.out.println("Je suis la tâche principale et j'arrête les tâches");
 		tache2.arrete();
 		tache1.arrete();
-	}	}
+	}
+}
