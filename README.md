@@ -18,6 +18,9 @@ Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique
 ## [Javafx](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/javafx)
 * Contient des exemples d'affichage, d'animations et de gestion d'événements en Java FX
 
+## [Swing](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/swing)
+* Contient des exemples de création de fenêtre en Java Swing
+
 ## [FXML](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/fxml) 
 * Contient des exemples d'utilisation d'une fenêtre décrite par SceneBuilder en FXML. Voir les explications [sur ce site](http://emmanuel.adam.free.fr/site/spip.php?article143)
 
