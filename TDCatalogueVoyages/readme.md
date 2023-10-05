@@ -55,13 +55,17 @@ E <-- > F
 ---
 ## Représentation des données
 1. **Créer une énumération Moyen** qui liste les moyens de transport Train, Tram et Bus, en initialisant leurs coût et vitesse. Ajoutez les accesseurs (getters pour le cout et la vitesse).
-   - Créer une classe ```Test``` qui contiendra un ```main``` et une fonction ```static void testMoyen()``` dans laquelle vous testerez le bon fonctionnement de cette énumération.
+   [Exemple de solution](https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TDCatalogueVoyages/Moyen.java).
+ - Créer une classe ```Test``` qui contiendra un ```main``` et une fonction ```static void testMoyen()``` dans laquelle vous testerez le bon fonctionnement de cette énumération.
+   [Exemple de solution](https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TDCatalogueVoyages/Tests.java).
 
 2. **Créer une énumération Ville** qui contient les villes A,B,C,D,E,F; en l’étendant pour qu’elle contienne :
    - la matrice des distances (réelles),
    - la fonction ```static double getDist(Ville start, Ville end)``` qui retourne la distance entre les deux villes *start* et *end*.
    - la fonction ```double getDist(Ville end)``` qui retourne la distance entre la ville courante et la ville *end*.
-   - Dans la classe ```Test```, créez une fonction ```static void testVille()``` dans laquelle vous testerez le bon fonctionnement de cette énumération.
+       - [Exemple de solution](https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TDCatalogueVoyages/Ville.java)
+- Dans la classe ```Test```, créez une fonction ```static void testVille()``` dans laquelle vous testerez le bon fonctionnement de cette énumération.
+[Exemple de solution](https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TDCatalogueVoyages/Tests.java).
 
 ---
 ## TrajetSimple
@@ -97,7 +101,11 @@ Les valeurs des cout, durée, date d'arrivee, doivent être recalculée.
 **Définir la méthode** ```public void setDateDepart(Local _moyen)``` qui permet de changer la date de départ d'un voyage.<br>
 Sa date d'arrivée doit être recalculée.
 
+ - [Exemple de solution](https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TDCatalogueVoyages/TrajetSimple.java)
+
+
 **Dans la classe ```Test```, créez une fonction ```static void testMoyen()```** dans laquelle vous créerez puis afficherez l'ensemble des trajets simples décrits dans l'énoncé.
+[Exemple de solution](https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TDCatalogueVoyages/Tests.java).
 
 ----
 ## Catalogue
@@ -108,8 +116,12 @@ Sa date d'arrivée doit être recalculée.
    - **Créer la fonction** ```void addTrajetSimple(TrajetSimple trajet)``` qui ajoute le trajet à sa bonne clé dans la table.
    - **Créer la fonction** ```creerCatalogue()``` qui crée la liste des trajets simples du réseau et les ajoute à la table .<br>
      Les trajets ont lieu toutes les 30mn, de 5h00 à 22h00
-   - Dans la classe ```Test```, **créer la fonction** ```static void testCatalogue()``` qui appelle la création du catalogue des trajets 
-   et qui affiche le trajet le moins cher, et le trajet le plus rapide entre A et F, en utilisant les Collections, les Comparator et la programmation lambda.
+- [Exemple de solution](https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TDCatalogueVoyages/TrajetSimple.java)
+
+
+- Dans la classe ```Test```, **créer la fonction** ```static void testCatalogue()``` qui appelle la création du catalogue des trajets 
+et qui affiche le trajet le moins cher, et le trajet le plus rapide entre A et F, en utilisant les Collections, les Comparator et la programmation lambda.
+  [Exemple de solution](https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TDCatalogueVoyages/Tests.java).
 
 
    - **Créer la fonction** ```trouveCheminsDirects(Ville depart,Ville arrivee, LocalTime dateDepart, int delaiMax)```

@@ -24,6 +24,9 @@ Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique
 ## [FXML](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/fxml) 
 * Contient des exemples d'utilisation d'une fenêtre décrite par SceneBuilder en FXML. Voir les explications [sur ce site](http://emmanuel.adam.free.fr/site/spip.php?article143)
 
+## TD
+* [TD Voyages](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TDCatalogueVoyages) :  Support pour le TD sur les trajets
+
 ## [TP](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP) 
 * Contient des codes répondant à quelques points de programmation pour les TP
   * [Exemple de grille](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/ExempleJeu) : un exemple simple de création d'une grille de jeu interactive
