@@ -116,7 +116,7 @@ Sa date d'arrivée doit être recalculée.
    - **Créer la fonction** ```void addTrajetSimple(TrajetSimple trajet)``` qui ajoute le trajet à sa bonne clé dans la table.
    - **Créer la fonction** ```creerCatalogue()``` qui crée la liste des trajets simples du réseau et les ajoute à la table .<br>
      Les trajets ont lieu toutes les 30mn, de 5h00 à 22h00
-- [Exemple de solution](https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TDCatalogueVoyages/TrajetSimple.java)
+- [Exemple de solution](https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TDCatalogueVoyages/Catalogue.java)
 
 
 - Dans la classe ```Test```, **créer la fonction** ```static void testCatalogue()``` qui appelle la création du catalogue des trajets 
