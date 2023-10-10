@@ -124,10 +124,33 @@ et qui affiche le trajet le moins cher, et le trajet le plus rapide entre A et F
   [Exemple de solution](https://github.com/EmmanuelADAM/coursJavaAvance/blob/master/TDCatalogueVoyages/Tests.java).
 
 
-   - **Créer la fonction** ```trouveCheminsDirects(Ville depart,Ville arrivee, LocalTime dateDepart, int delaiMax)```
-     qui retourne la liste des trajets simples entre départ et arrivée partant entre ```dateDepart``` et ```dateDepart + delaiMax```.
-     - il faut utiliser les récentes méthodes sur les listes (_ex. liste.removeIf(.....)_)
-     - _Exemple de méthodes utiles_ : si ```date``` et ```dateDepart``` sont de type ```LocalTime``` :
-       - ```dateDepart.isAfter(date)``` retourne vrai si ```dateDepart > date```
-       - ```dateDepartAuPlusTard.isBefore(date)``` retourne vrai si ```dateDepartAuPlusTard < date```
-       - la fonction ```compareTo(LocalTime autre)``` est définie pour les objets de type ```LocalTime```
+- **Créer la fonction** ```trouveCheminsDirects(Ville depart,Ville arrivee, LocalTime dateDepart, int delaiMax)```
+  qui retourne la liste des trajets simples entre départ et arrivée partant entre ```dateDepart``` et ```dateDepart + delaiMax```.
+  - il faut utiliser les récentes méthodes sur les listes (_ex. liste.removeIf(.....)_)
+  - _Exemple de méthodes utiles_ : si ```date``` et ```dateDepart``` sont de type ```LocalTime``` :
+    - ```dateDepart.isAfter(date)``` retourne vrai si ```dateDepart > date```
+    - ```dateDepartAuPlusTard.isBefore(date)``` retourne vrai si ```dateDepartAuPlusTard < date```
+    - la fonction ```compareTo(LocalTime autre)``` est définie pour les objets de type ```LocalTime```
+
+- Dans la classe ```Test```, **modifier la fonction** ```static void testCatalogue()``` pour rechercher les trajets de D vers A entre 7h et 9h.
+
+
+----
+## Trajet Composé
+
+**Créer une classe `TrajetCompose`**.<br>
+Cette classe possède une liste de trajets consécutifs; c'est à dire que l'arrivée d'un trajet est le départ du trajet suivant dans la liste.
+Une trajet composé possède un départ, une arrivée, une durée totale, un coût total, une date de départ et une date d'arrivée.
+* **Créer la fonction `private void calcule()`** qui calcule la durée totale et le coût total à partir des trajets contenus dans le trajet composé.<br>
+La fonction initialise également les dates de départ et d'arrivée du trajet composé.
+  * note : la méthode `ChronoUnit.MINUTES.between(dateDepart, date)` retourne le nombre de minutes séparant les dates (nombre pouvant être négatif).
+* **Créer la fonction `void add(TrajetSimple trajet)`** qui ajoute le trajet à la liste des trajets s'il est bien une suite du voyage déjà constitué.
+* **Créer la fonction `void add(List<TrajetSimple> trajets)`** qui ajoute les trajets passés en paramètres à la liste des trajets. On suppose que les trajets se suivent logiquement.
+Cette fonction appelle la fonction calcule()
+* **Surcharger la fonction `String toString()`** pour afficher le départ et l'arrivée finale d'un trajet composé, ainsi que le coût total, les date de départ et d'arrivée, et la durée totale.
+
+Dans la classe Test, **rédigez la procédure `static void testTrajetCompose()`** qui : 
+* crée une trajet composé pour y ajouter les trajets simples de A à B par Bus, de B à C par Bus, et de C à F en Train.
+*  crée une trajet composé pour y ajouter les trajets simples de A à B par Bus, et de C à F en Train. Cet ajout ne doit pas être permis.
+
+----
