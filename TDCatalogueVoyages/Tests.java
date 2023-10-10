@@ -81,6 +81,11 @@ public class Tests {
         trajet.ifPresent(t->System.out.println("Le trajet le moins cher partant de " + ville + " est " + t));
         trajet = lesTrajets.stream().max(Comparator.comparingDouble(TrajetSimple::getDuree));
         trajet.ifPresent(t->System.out.println("Le trajet le plus long partant de " + ville + " est " + t));
+        System.out.println("-".repeat(30));
+        Ville depart = Ville.A;
+        Ville arrivee = Ville.D;
+        var chemins = cata.trouveCheminsDirects(depart, arrivee, LocalTime.of(5,00), 120);
+        System.out.println(chemins);
     }
 
     public static void main(String[] args){

@@ -23,14 +23,6 @@ public class TrajetSimple {
         calcule();
     }
 
-    /**calcule la distance, le cout, la duree et la date d'arrivee à partir des autres champs*/
-    private void calcule(){
-        distance = depart.getDist(arrivee);
-        cout = distance * moyen.getCout();
-        duree = (distance / moyen.getVitesse())*60d;
-        dateArrivee = dateDepart.plusMinutes((int)duree);
-    }
-
     /**Constructeur créant un trajet simple entre les villes _depart et _arrivee,
      * à partir de la date _dateDepart donnée sous la forme hh:mm et du moyen de locomotion _moyen*/
     TrajetSimple(String _depart, String _arrivee,  int _dateDepart, String _moyen)
@@ -43,6 +35,29 @@ public class TrajetSimple {
         this.dateDepart = LocalTime.of(hh, mm);
         calcule();
     }
+
+    /**constructeur par recopie*/
+    public TrajetSimple(TrajetSimple original) {
+        this.depart = original.depart;
+        this.arrivee = original.arrivee;
+        this.moyen = original.moyen;
+        this.dateDepart = original.dateDepart;
+        this.distance = original.distance ;
+        this.cout = original.cout;
+        this.duree = original.duree;
+        this.dateArrivee = original.dateArrivee;
+    }
+
+
+    /**calcule la distance, le cout, la duree et la date d'arrivee à partir des autres champs*/
+    private void calcule(){
+        distance = depart.getDist(arrivee);
+        cout = distance * moyen.getCout();
+        duree = (distance / moyen.getVitesse())*60d;
+        dateArrivee = dateDepart.plusMinutes((int)duree);
+    }
+
+
 
     @Override
     public String toString() {
