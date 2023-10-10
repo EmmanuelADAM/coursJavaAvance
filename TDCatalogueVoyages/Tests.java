@@ -88,10 +88,34 @@ public class Tests {
         System.out.println(chemins);
     }
 
+    static void testTrajetCompose(){
+        TrajetCompose tjc = new TrajetCompose();
+        TrajetSimple tj = new TrajetSimple(Ville.A, Ville.B, Moyen.Bus, LocalTime.of(9,0));
+        tjc.add(tj);
+        System.out.println(tjc);
+        tj = new TrajetSimple(Ville.B, Ville.C, Moyen.Bus, LocalTime.of(9,30));
+        tjc.add(tj);
+        System.out.println(tjc);
+        tj = new TrajetSimple(Ville.C, Ville.F, Moyen.Train, LocalTime.of(10,00));
+        tjc.add(tj);
+        System.out.println(tjc);
+        System.out.println(tjc.detailVoyage());
+
+        tjc = new TrajetCompose();
+        tj = new TrajetSimple(Ville.A, Ville.B, Moyen.Bus, LocalTime.of(9,0));
+        tjc.add(tj);
+        tj = new TrajetSimple(Ville.C, Ville.F, Moyen.Train, LocalTime.of(10,0));
+        tjc.add(tj);
+        System.out.println("-".repeat(30));
+        System.out.println(tjc);
+        System.out.println(tjc.detailVoyage());
+    }
+
     public static void main(String[] args){
 //        testMoyens();
 //                testVilles();
 //        testTrajetSimple();
-        testCatalogue();
+//        testCatalogue();
+        testTrajetCompose();
     }
 }
