@@ -1,9 +1,10 @@
 package TDCatalogueVoyages;
 
+import java.io.Serializable;
 import java.time.LocalTime;
 
 /**Trajet simple, direct entre 2 viles*/
-public class TrajetSimple {
+public class TrajetSimple implements Serializable {
     Ville depart;
     Ville arrivee;
     double distance;
@@ -36,17 +37,7 @@ public class TrajetSimple {
         calcule();
     }
 
-    /**constructeur par recopie*/
-    public TrajetSimple(TrajetSimple original) {
-        this.depart = original.depart;
-        this.arrivee = original.arrivee;
-        this.moyen = original.moyen;
-        this.dateDepart = original.dateDepart;
-        this.distance = original.distance ;
-        this.cout = original.cout;
-        this.duree = original.duree;
-        this.dateArrivee = original.dateArrivee;
-    }
+
 
 
     /**calcule la distance, le cout, la duree et la date d'arrivee à partir des autres champs*/

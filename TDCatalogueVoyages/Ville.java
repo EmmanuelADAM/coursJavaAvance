@@ -1,9 +1,11 @@
 package TDCatalogueVoyages;
 
+import java.io.Serializable;
+
 /**Villes (A,B,C,D,E,F).
  * cette énumération possède la matrice des distances entre les villes
  * */
-public enum Ville {A,B,C,D,E,F;
+public enum Ville implements Serializable {A,B,C,D,E,F;
     /**matrice d'adjacences représentant les distances entre les villes*/
     final static double[][] matDist =
             {{0.,10.,-1.,20.,-1.,35.},

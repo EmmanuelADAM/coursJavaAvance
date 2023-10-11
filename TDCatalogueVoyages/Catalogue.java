@@ -1,12 +1,13 @@
 package TDCatalogueVoyages;
 
+import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 /**catalogue des trajets*/
-public class Catalogue {
+public class Catalogue implements Serializable {
     /**map avec comme cle une ville et en valeur la liste des trajets partant de cette ville*/
     HashMap<Ville, List<TrajetSimple>> tableDepart;
 
@@ -42,30 +43,10 @@ public class Catalogue {
                     var tjRetour = new TrajetSimple(end, start, m, LocalTime.of(5, 0));
                     addTrajetSimple(tjAller);
                     addTrajetSimple(tjRetour);
-                    for(int k=1; k<34; k++)
-                    {
-                        TrajetSimple copie = new TrajetSimple(tjAller);
-                        copie.setDateDepart(copie.getDateDepart().plusMinutes(k*30));
-                        addTrajetSimple(copie);
-                        copie = new TrajetSimple(tjRetour);
-                        copie.setDateDepart(copie.getDateDepart().plusMinutes(k*30));
-                        addTrajetSimple(copie);
-                    }
                 }
             }
         }
     }
 
-    List<TrajetSimple> trouveCheminsDirects(Ville depart,Ville arrivee, LocalTime dateDepart, int delaiMax){
-        var listeChemins = tableDepart.get(depart);
-        if(listeChemins!=null)
-        {
-            LocalTime dateAuPlusTard = dateDepart.plusMinutes(delaiMax);
-            var f = listeChemins.stream().filter(t->(t.getArrivee()==arrivee &&
-                    (t.getDateDepart().compareTo(dateDepart)<=0 ||
-                    t.getDateDepart().isBefore(dateAuPlusTard) )));
-            listeChemins = f.toList();
-        }
-        return listeChemins;
-    }
+
 }
