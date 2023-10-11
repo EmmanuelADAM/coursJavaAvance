@@ -76,13 +76,26 @@ public class Tests {
         trajet = lesTrajets.stream().max(Comparator.comparingDouble(TrajetSimple::getDuree));
         trajet.ifPresent(t -> System.out.println("Le trajet le plus long partant de " + ville + " est " + t));
         System.out.println("-".repeat(30));
+        System.out.println("Trajets de D vers A entre 7h et 9h : ");
+        var l = cata.trouveCheminsDirects(Ville.D, Ville.A, LocalTime.of(7,0), 120);
+        System.out.println(l);
         return cata;
+    }
+
+    static void testTrajetCompose(){
+        TrajetCompose tc = new TrajetCompose();
+        tc.add(new TrajetSimple(Ville.A, Ville.B, Moyen.Bus, LocalTime.now()));
+        tc.add(new TrajetSimple(Ville.B, Ville.C, Moyen.Bus, LocalTime.now().plusMinutes(30)));
+        tc.add(new TrajetSimple(Ville.C, Ville.F, Moyen.Train, LocalTime.now().plusMinutes(60)));
+        System.out.println(tc);
+        System.out.println(tc.detailToString());
     }
 
     public static void main(String[] args) {
 //        testMoyens();
 //                testVilles();
 //        testTrajetSimple();
-        var catalog = testCatalogue();
+//        var catalog = testCatalogue();
+        testTrajetCompose();
     }
 }

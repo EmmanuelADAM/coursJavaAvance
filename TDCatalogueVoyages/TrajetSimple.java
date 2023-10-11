@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.time.LocalTime;
 
 /**Trajet simple, direct entre 2 viles*/
-public class TrajetSimple implements Serializable {
+public class TrajetSimple implements Serializable, Cloneable {
     Ville depart;
     Ville arrivee;
     double distance;
@@ -16,12 +16,37 @@ public class TrajetSimple implements Serializable {
     double duree;
     LocalTime dateArrivee;
 
+    TrajetSimple(){}
     public TrajetSimple(Ville depart, Ville arrivee, Moyen moyen, LocalTime dateDepart) {
         this.depart = depart;
         this.arrivee = arrivee;
         this.moyen = moyen;
         this.dateDepart = dateDepart;
         calcule();
+    }
+
+    public TrajetSimple(TrajetSimple original) {
+        this.depart = original.depart;
+        this.arrivee = original.arrivee;
+        this.distance = original.distance;
+        this.moyen = original.moyen;
+        this.cout = original.cout;
+        this.dateDepart = original.dateDepart;
+        this.duree = original.duree;
+        this.dateArrivee = original.dateArrivee;
+    }
+
+    public static TrajetSimple getTrajetSimple(TrajetSimple original) {
+        TrajetSimple tj = new TrajetSimple();
+        tj.depart = original.depart;
+        tj.arrivee = original.arrivee;
+        tj.distance = original.distance;
+        tj.moyen = original.moyen;
+        tj.cout = original.cout;
+        tj.dateDepart = original.dateDepart;
+        tj.duree = original.duree;
+        tj.dateArrivee = original.dateArrivee;
+        return tj;
     }
 
     /**Constructeur créant un trajet simple entre les villes _depart et _arrivee,
@@ -104,5 +129,20 @@ public class TrajetSimple implements Serializable {
     public void setDateDepart(LocalTime dateDepart) {
         this.dateDepart = dateDepart;
         calcule();
+    }
+
+    public void setDateArrivee(LocalTime dateArrivee) {
+        this.dateArrivee = dateArrivee;
+    }
+
+    @Override
+    public TrajetSimple clone() {
+        try {
+            TrajetSimple clone = (TrajetSimple) super.clone();
+            // TODO: copy mutable state here, so the clone can't change the internals of the original
+            return clone;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
     }
 }

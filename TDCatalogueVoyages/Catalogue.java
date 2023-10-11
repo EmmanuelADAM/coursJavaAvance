@@ -43,9 +43,27 @@ public class Catalogue implements Serializable {
                     var tjRetour = new TrajetSimple(end, start, m, LocalTime.of(5, 0));
                     addTrajetSimple(tjAller);
                     addTrajetSimple(tjRetour);
+                    for (int k=1; k<34; k++ )
+                    {
+                        TrajetSimple copie = new TrajetSimple(tjAller);
+                        copie.setDateDepart(copie.getDateDepart().plusMinutes(k*30));
+                        addTrajetSimple(copie);
+                        copie = new TrajetSimple(tjRetour);
+                        copie.setDateDepart(copie.getDateDepart().plusMinutes(k*30));
+                        addTrajetSimple(copie);
+                    }
                 }
             }
         }
+    }
+    public List<TrajetSimple> trouveCheminsDirects(Ville depart,Ville arrivee, LocalTime dateDepart, int delaiMax){
+        var liste = tableDepart.get(depart);
+        LocalTime dateDepartAuPlusTard = dateDepart.plusMinutes(delaiMax);
+        var flux = liste.stream().filter(t->(
+                t.getArrivee()==arrivee &&
+                t.dateDepart.compareTo(dateDepart)>=0 &&
+                t.dateDepart.compareTo(dateDepartAuPlusTard)<=0) );
+        return flux.toList();
     }
 
 

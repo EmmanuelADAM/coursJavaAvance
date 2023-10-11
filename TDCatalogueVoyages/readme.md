@@ -15,7 +15,7 @@ Voici le tableau des distances correspondant au réseau à modéliser :
 
 Dans ce tableau,
 - les trajets entre les villes A et F ne sont réalisables qu’en train
-- les trajets entres les villes A et D et D et F ne sont réalisables qu’en tram.
+- les trajets entre les villes A et D et D et F ne sont réalisables qu’en tram.
 - les autres trajets ne sont réalisables qu’en bus.
 
 Le coût au km d’un trajet en train est plus élevé que celui d’un trajet en tram qui est supérieur au coût d’un trajet en bus.<br>
@@ -47,7 +47,6 @@ A <-[#red]> F
 E <-- > F
 @enduml 
 ```
-
 -->
 
 <img src="trajetsTDVoyage.png" alt="reseau v2" height="200"/>
@@ -154,3 +153,38 @@ Dans la classe Test, **rédigez la procédure `static void testTrajetCompose()`*
 *  crée une trajet composé pour y ajouter les trajets simples de A à B par Bus, et de C à F en Train. Cet ajout ne doit pas être permis.
 
 ----
+## Gestion de fichiers
+
+**Fichier binaire**
+
+ - Créer quelques voyages et sauvegardez les dans un fichier « catalogue.obj ».
+ - Lisez ensuite le fichier et afficher les voyages..
+ - Les voyages et leurs caractéristiques doivent donc être enregistrables (serializable).
+ - *(Facultatif : Définissez ensuite quelques attributs en tant que ’transitoires’ (transcient) dont leurs valeurs ne seront donc pas enregistrés mais recalculés une fois les objets chargés du fichier)*
+
+**Fichier CSV**
+ -  On suppose que les trajets sont dans un fichier CSV avec des entrées de la forme : `depart,arrivee,moyen,dateDepart,frequence,intervale` pour un trajet allant de la ville de départ à la ville d’arrivée avec le moyen de locomotion précisé à partir de la date donnée, trajet se répétant `fréquence`fois toutes les `intervale`minutes. 
+ - voici le contenu du fichier
+```
+A,B,Bus,600,32,30
+A,D,Tram,600,32,30
+A,F,Train,600,16,60
+B,A,Bus,600,32,30
+B,C,Bus,600,32,30
+B,D,Bus,600,32,30
+C,B,Bus,600,32,30
+C,D,Bus,600,32,30
+C,E,Bus,600,32,30
+C,F,Bus,600,32,30
+D,A,Tram,600,32,30
+D,B,Bus,600,32,30
+D,C,Bus,600,32,30
+D,E,Bus,600,32,30
+D,F,Tram,600,32,30
+E,C,Bus,600,32,30
+E,D,Bus,600,32,30
+E,F,Bus,600,32,30
+F,A,Train,600,16,60
+F,C,Bus,600,32,30
+F,D,Tram,600,32,30
+```
