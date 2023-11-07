@@ -10,6 +10,15 @@ Le TP s’effectuera en plusieurs étapes :
 
 >>Le graphisme sera **en JavaFX**.
 >>  - *pour installer JavaFx, télécharger la librairie adaptée à votre machine à partir de [openjfx.io](https://openjfx.io/)*
+>> 
+>> à réaliser seul(e) ou en binôme au maximum
+>> 
+>> :-1: Pas de copier-coller !
+>> 
+>> :+1: documentation :
+>>  - la documentation explicite du code sous forme de commentaire javadoc
+>>   - un bloc d’au minimum 3 lignes doit précéder chaque fonction, incluant les tags @param, @return si possible
+
 
 **Bonus de points** : si vous utilisez au maximum les nouvelles techniques de balayage de tableau et de liste de Java, ainsi que les lambdas expression
 
@@ -73,8 +82,6 @@ dessinIntrus.setOnKeyPressed(e->{
 --
 **A réaliser en priorité avant le TP2 :**
 
-- la documentation explicite du code sous forme de commentaire javadoc
-  - un bloc d’au minimum 3 lignes doit précéder chaque fonction, incluant les tags @param, @return si possible
 - la possibilité de paramétrer facilement :
   - la vitesse des drones, la vitesse des intrus, la taille de l'environnement, la densité ded obstacles dans l’environnement, le nombre de sorties, le nombre de `zones à trouver’
 - utiliser un fichier de logs pour suivre l’évolution du programme. Dans ce fichier de logs doivent se trouver les messages (incluant le ’top horloge’, moment du message) :
