@@ -5,7 +5,7 @@ Il s’agit dans ce TP de programmer une poursuite d’intrus par des drones pat
 Le TP s’effectuera en plusieurs étapes :
 
  - 1 joueur seul devant le programme
-  - ajout d’une "intelligence artificielle" simple rendant «plus intelligent» le comportement des drones.
+  - ajout d’une intelligence artificielle "simple" rendant « plus intelligent » le comportement des drones.
   - gestion de jeu (obligatoire) et n joueurs en réseau (facultatif)
 
 >>Le graphisme sera **en JavaFX**.
@@ -19,21 +19,17 @@ Le TP s’effectuera en plusieurs étapes :
 >>  - la documentation explicite du code sous forme de commentaire javadoc
 >>   - un bloc d’au minimum 3 lignes doit précéder chaque fonction, incluant les tags @param, @return si possible
 
+-- --
 
->> Configuration IntelliJ pour JavaFX (adapter pour Eclipse, Visual Studio code, ....):<br> 
+>> **Configuration** IntelliJ pour JavaFX (adapter pour Eclipse, Visual Studio code, ....):<br> 
 >> - Dans File -> Project Structure -> Libraries
 >>   - choisissez New Project Library (Java) et ajouter le chemin vers le dossier lib de javaFx :
 >>    -  /MonDossier/openjfx/lib
->>   - ou chaque .jar désiré :
->>    - /MonDossier/openjfx/lib/javafx-base-20-mac.jar
->>    - /MonDossier/openjfx/lib/javafx-controls-20-mac.jar
->>    - /MonDossier/openjfx/lib/javafx-graphics-20-mac.jar
->>    - ...
->> - **Si cela compile mais que ça ne s'exécute pas**
+>> - **Si cela compile, mais que ça ne s'exécute pas**
 >>  - modifier les paramètres de la machine virtuelle au lancement du programme
 >>    - Run -> Edit configuration -> add VM argument
->>      - ajouter ceci : --module-path /MonDossier/libJava/javafx/lib --add-modules=javafx.controls,javafx.fxml 
->>  - Eventuellement ajouter la variable d'environnement dans votre IDE : 
+>>      - ajouter ceci : --module-path /MonDossier/javafx/lib --add-modules=javafx.controls,javafx.fxml 
+>>  - Éventuellement, ajouter la variable d'environnement dans votre IDE : 
 >>    - PATH_TO_FX	-> /MonDossier/javafx/lib
 >>      - (dans IntelliJ : Preferences -> apparence -> Path Variables)
 
