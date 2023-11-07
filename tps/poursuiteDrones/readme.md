@@ -8,7 +8,8 @@ Le TP s’effectuera en plusieurs étapes :
   - ajout d’une "intelligence artificielle" simple rendant «plus intelligent» le comportement des drones.
   - gestion de jeu (obligatoire) et n joueurs en réseau (facultatif)
 
-Le graphisme sera **en JavaFX**.
+>>Le graphisme sera **en JavaFX**.
+>>  - *pour installer JavaFx, télécharger la librairie adaptée à votre machine à partir de [openjfx.io](https://openjfx.io/)*
 
 **Bonus de points** : si vous utilisez au maximum les nouvelles techniques de balayage de tableau et de liste de Java, ainsi que les lambdas expression
 
@@ -42,7 +43,7 @@ Voici un exemple de première réalisation :
 
 **Aide**
 
-En suivant l’exemple de la simulation de Fourmis (cf. TP Fourmis) .
+En suivant l’exemple de la simulation de Fourmis (cf. [TP Fourmis](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/fourmis))) .
 
 - Créer les classes Drone et Intrus. <br>
   Drone reprend beaucoup de Fourmis, Intrus, un peu moins. 
