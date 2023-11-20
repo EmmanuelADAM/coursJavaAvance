@@ -1,6 +1,6 @@
 # Cours Java Avancé
-Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique des Hauts-De-France
-(version site web)[https://emmanueladam.github.io/coursJavaAvance/]
+Quelques supports au cours Java Avancé à l'INSA HdF - Université Polytechnique des Hauts-De-France.
+[(version site web)](https://emmanueladam.github.io/coursJavaAvance/)
 
 
 ## [Base](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/base)
@@ -24,8 +24,12 @@ Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique
 ## [FXML](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/fxml) 
 * Contient des exemples d'utilisation d'une fenêtre décrite par SceneBuilder en FXML. Voir les explications [sur ce site](http://emmanuel.adam.free.fr/site/spip.php?article143)
 
+---
+
 ## TD
 * [TD Voyages](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TDCatalogueVoyages) :  Support pour le TD sur les trajets
+
+---
 
 ## [TP](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP) 
 * Contient des codes répondant à quelques points de programmation pour les TP
@@ -35,5 +39,7 @@ Quelques support au cours Java Avancé à l'INSA HdF - Université Polytechnique
   coder l'algorithme d'apprentissage par régression logistique en Java
 * [Reseau de neurones](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/TP/TPNN) :
   coder l'algorithme d'apprentissage par réseau de neurones monocouche en Java
+* [Drones](https://github.com/EmmanuelADAM/coursJavaAvance/tree/master/tps/poursuiteDrones) :
+  coder un jeu de poursuite d'un intrus par des dones
 
 
