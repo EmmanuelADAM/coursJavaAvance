@@ -96,12 +96,31 @@ dessinIntrus.setOnKeyPressed(e->{
 
 - la possibilité de paramétrer facilement :
   - la vitesse des drones, la vitesse des intrus, la taille de l'environnement, la densité ded obstacles dans l’environnement, le nombre de sorties, le nombre de `zones à trouver’
-- utiliser un fichier de logs pour suivre l’évolution du programme. Dans ce fichier de logs doivent se trouver les messages (incluant le ’top horloge’, moment du message) :
-  - création de l’environnement,
-  - position des drones,
-  - position de l’intrus,
-  - perception de l’intrus par un drone,
-  - perte de perception de l’intrus par un drone,
-  - capture de l’intrus,
-  - capture de la caisse recherchée,
-  - sortie de l’environnement par l’intrus
+- utiliser un fichier de logs pouvoir debugguer le programme ou suivre a posteriori son évolution.
+  - Dans ce fichier de logs, les messages doivent inclure le ’top horloge’, moment du message)
+
+----
+## TP2   
+
+Il doit être possible de paramétrer :
+- la dimension de l’environnement,
+- le nombre et la position des drones,
+- le rythme du tempo,
+- la position de l’intrus (initialement auprès d'un des bords de l'environnement),
+- la zone de perception de l’intrus,
+- la zone de perception de l’intrus par un drone.
+
+----
+## TP3   
+
+On peaufine le jeu : 
+- pour être capturé, l'intrus doit rester 5 secondes dans le champ de vision d'un drone,
+- les arbres ont 2 hauteurs différentes,
+- il existe des méga-drones ; ceux-ci peuvent passer au-dessus des petits arbres,
+- un drone ne voit pas l'intrus s'il est caché par un arbre,
+- les drones tentent de ne pas rester bloqué par un arbre pour rejoindre l'intrus
+- des drones dans la même case se percutent et se désactivent
+- des méga-drones dans la même case se percutent et se désactivent
+- le jeu va crescendo ; peu de drones au debut, et ils sont lents; ils deviennent de plus en plus rapides et de plus en plus nombreux. 
+
+---
